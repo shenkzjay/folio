@@ -106,7 +106,7 @@ const cards = [
         class="grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-12 w-full md:p-6 py-6"
       >
         {
-          cards?.map((items, id) => (
+          cards?.map((items) => (
             <div class="border-t-[.5px] hover:bg-slate-50">
               <CardLayout title={items.title} videolink={items.videolink} slug={`${items.slug}`} />
             </div>
@@ -114,11 +114,11 @@ const cards = [
         }
       </div>
     </section>
-    <foote class="flex flex-row justify-center my-10 text-[#7b7b7b] gap-1 font-thin">
+    <footer class="flex flex-row justify-center my-10 text-[#7b7b7b] gap-1 font-thin">
       <span>Olajide Seun</span>
       <span>|</span>
       <span>Web developer</span>
-    </foote>
+    </footer>
   </main>
 </Layout>
 
@@ -233,7 +233,7 @@ const cards = [
     top: 0;
     animation: heightdown linear both;
     z-index: 1;
-    background: repeating-linear-gradient(45deg, rgb(240, 240, 240) 2% 2%, transparent 2.5% 4%);
+    background: #f7f7f7;
 
     border-bottom: none;
   }
