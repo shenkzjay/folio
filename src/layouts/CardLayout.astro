@@ -10,7 +10,7 @@ interface Props {
 const { title, videolink, slug } = Astro.props;
 ---
 
-<a class="flex group flex-col gap-2" href={`/projects/${slug}`}>
+<a class="flex group flex-col gap-2 mx-6 md:mx-0" href={`/projects/${slug}`}>
   <div class="h-full w-full border overflow-hidden rounded-[10px]">
     <!-- <Image
       src={videolink}

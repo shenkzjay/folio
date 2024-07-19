@@ -61,7 +61,7 @@ const cards = [
         class="flex md:flex-row items-center justify-between md:my-6 gap-8 headertop bg-white mix-blend-multiply mx-6 md:mx-0"
       >
         <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
-        <div class="flex flex-col mt-6 md:mt-0">
+        <div class="flex flex-col mt-4 md:mt-0">
           <h3 class="[font-size:clamp(1.5rem,5vw,2rem)] font-bold">Olajide Seun</h3>
           <div class="slider relative flex flex-col w-full h-6 overflow-hidden">
             <p id="slide1" class="absolute top-0 bg-white z-20 text-[#7b7b7b]">Web developer</p>
@@ -103,11 +103,11 @@ const cards = [
 
     <section class="tabdetails border-[.5px] md:my-[13rem] my-[16rem]">
       <div
-        class="projectTab active grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-12 w-full md:p-6 py-6"
+        class="grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-12 w-full md:p-6 py-6"
       >
         {
           cards?.map((items, id) => (
-            <div class="border-t-[.5px] hover:bg-slate-50 mx-6">
+            <div class="border-t-[.5px] hover:bg-slate-50">
               <CardLayout title={items.title} videolink={items.videolink} slug={`${items.slug}`} />
             </div>
           ))
@@ -273,7 +273,7 @@ const cards = [
         font-size: 1em;
       }
       to {
-        height: 7rem;
+        height: 6rem;
         font-size: 1em;
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
         background: white;
