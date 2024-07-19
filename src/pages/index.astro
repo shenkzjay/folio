@@ -53,14 +53,16 @@ const cards = [
 ---
 
 <Layout title="">
-  <main class="w-[700px] mx-auto relative">
-    <header class="flex flex-col gap-4 border px-10 headershit w-[700px] mx-auto">
+  <main class="md:w-[700px] md:mx-auto relative">
+    <header
+      class="flex flex-col md:gap-4 border md:px-6 headershit md:w-[700px] w-full h-full md:mx-auto"
+    >
       <div
-        class="flex flex-row items-center justify-between mt-10 gap-8 headertop bg-white mix-blend-multiply"
+        class="flex md:flex-row items-center justify-between md:my-6 gap-8 headertop bg-white mix-blend-multiply mx-6 md:mx-0"
       >
         <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
-        <div class="">
-          <h3 class="[font-size:clamp(2rem,5vw,2rem)] font-bold">Olajide Seun</h3>
+        <div class="flex flex-col mt-6 md:mt-0">
+          <h3 class="[font-size:clamp(1.5rem,5vw,2rem)] font-bold">Olajide Seun</h3>
           <div class="slider relative flex flex-col w-full h-6 overflow-hidden">
             <p id="slide1" class="absolute top-0 bg-white z-20 text-[#7b7b7b]">Web developer</p>
           </div>
@@ -82,9 +84,11 @@ const cards = [
         </div>
       </div>
 
-      <div class="flex flex-row justify-between displaytext overflow-hidden h-full items-center">
-        <div>
-          <p class="w-[25rem] text-[#7b7b7b]">
+      <div
+        class="flex md:flex-row flex-col gap-6 md:gap-0 mt-6 md:mt-0 md:justify-between justify-center displaytext overflow-hidden items-center"
+      >
+        <div class="flex justify-center md:justify-start">
+          <p class="md:w-[25rem] w-2/3 text-[#7b7b7b] text-center">
             making simple, functional and interative interfaces...
           </p>
         </div>
@@ -97,13 +101,13 @@ const cards = [
       </div>
     </header>
 
-    <section class="tabdetails border-[.5px] my-[25vh]">
+    <section class="tabdetails border-[.5px] md:my-[13rem] my-[16rem]">
       <div
-        class="projectTab active grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-12 w-full p-6"
+        class="projectTab active grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-12 w-full md:p-6 py-6"
       >
         {
           cards?.map((items, id) => (
-            <div class="border-t-[.5px] hover:bg-slate-50">
+            <div class="border-t-[.5px] hover:bg-slate-50 mx-6">
               <CardLayout title={items.title} videolink={items.videolink} slug={`${items.slug}`} />
             </div>
           ))
@@ -251,21 +255,36 @@ const cards = [
 
   @keyframes heightdown {
     from {
-      height: 25vh;
+      height: 13rem;
       font-size: 1em;
     }
     to {
-      height: 15vh;
+      height: 7rem;
       font-size: 1em;
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
       background: white;
     }
   }
 
+  @media screen and (max-width: 800px) {
+    @keyframes heightdown {
+      from {
+        height: 16rem;
+        font-size: 1em;
+      }
+      to {
+        height: 7rem;
+        font-size: 1em;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+        background: white;
+      }
+    }
+  }
+
   @keyframes reducetext {
     to {
-      /* transform: translate(0%, -40%); */
-      margin-top: 1rem;
+      transform: translate(0%, 0%);
+      /* margin-top: 1.5rem; */
     }
   }
 
