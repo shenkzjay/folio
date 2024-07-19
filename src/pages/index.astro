@@ -63,16 +63,16 @@ const cards = [
         class="flex md:flex-row items-center justify-between md:my-6 mt-2 gap-8 headertop mx-6 md:mx-0"
       >
         <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
-        <div class="flex flex-row items-center gap-4 headername">
+        <div class="flex flex-row items-center md:gap-4 gap-1 headername">
           <div class="flex">
-            <span class="w-20 h-20 rounded-full overflow-hidden">
+            <span class="w-16 h-16 rounded-full overflow-hidden">
               <Image src={Profile} width={100} height={100} alt="profile pics" />
             </span>
           </div>
-          <div class="flex flex-col mt-4 md:mt-0">
-            <h3 class="[font-size:clamp(1.5rem,5vw,1.5rem)]">Olajide Seun</h3>
-            <div class="slide relative flex flex-col w-full h-6 overflow-hidden">
-              <p id="slide1" class="z-20 text-[#7b7b7b]">Web developer</p>
+          <div class="flex flex-col mt-4 md:mt-0 w-full">
+            <h3 class="[font-size:clamp(1rem,5vw,1.5rem)]">Olajide Seun</h3>
+            <div class="relative flex flex-col w-full">
+              <p id="" class="z-20 text-[#7b7b7b]">Web developer</p>
             </div>
           </div>
         </div>
@@ -267,9 +267,14 @@ const cards = [
   .headertop,
   .displaytext,
   .headershit,
-  .headername {
+  .headername,
+  .headernametext {
     animation-timeline: scroll();
     animation-range: 0px 150px;
+  }
+
+  .headernametext {
+    animation: movetextup linear both;
   }
 
   @keyframes scaledownheaderpics {
@@ -330,7 +335,7 @@ const cards = [
 
   @keyframes displaytext {
     to {
-      transform: translate(0%, -100%);
+      transform: translateY(0%, -100%);
       visibility: hidden;
       opacity: 0;
     }
