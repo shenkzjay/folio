@@ -6,6 +6,7 @@ import LinkedIcon from "../../public/svgIcon/linkedIcon.astro";
 import GithubIcon from "../../public/svgIcon/githubIcon.astro";
 import MailIcon from "../../public/svgIcon/mailIcon.astro";
 import DownloadIcon from "../../public/svgIcon/downloadIcon.astro";
+import Linkarrow from "../../public/svgIcon/linkarrow.astro";
 
 const cards = [
   {
@@ -55,16 +56,16 @@ const cards = [
 <Layout title="">
   <main class="md:w-[700px] md:mx-auto relative">
     <header
-      class="flex flex-col md:gap-4 border md:px-6 headershit md:w-[700px] w-full h-full md:mx-auto"
+      class="flex flex-col md:gap-4 border md:px-6 headershit md:w-[700px] w-full h-full md:mx-auto gap-10"
     >
       <div
-        class="flex md:flex-row items-center justify-between md:my-6 gap-8 headertop bg-white mix-blend-multiply mx-6 md:mx-0"
+        class="flex md:flex-row items-center justify-between md:my-6 gap-8 headertop mx-6 md:mx-0"
       >
         <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
         <div class="flex flex-col mt-4 md:mt-0">
-          <h3 class="[font-size:clamp(1.5rem,5vw,2rem)] font-bold">Olajide Seun</h3>
-          <div class="slider relative flex flex-col w-full h-6 overflow-hidden">
-            <p id="slide1" class="absolute top-0 bg-white z-20 text-[#7b7b7b]">Web developer</p>
+          <h3 class="[font-size:clamp(1.5rem,5vw,1.5rem)]">Olajide Seun</h3>
+          <div class="slide relative flex flex-col w-full h-6 overflow-hidden">
+            <p id="slide1" class="z-20 text-[#7b7b7b]">Web developer</p>
           </div>
         </div>
 
@@ -84,40 +85,48 @@ const cards = [
         </div>
       </div>
 
-      <div
-        class="flex md:flex-row flex-col gap-6 md:gap-0 mt-6 md:mt-0 md:justify-between justify-center displaytext overflow-hidden items-center"
-      >
-        <div class="flex justify-center md:justify-start">
-          <p class="md:w-[25rem] w-2/3 text-[#7b7b7b] text-center">
-            making simple, functional and interative interfaces...
-          </p>
-        </div>
-        <div
-          class="flex items-center pr-3 justify-center rounded-[10px] border-2 border-black hover:rounded-[20px] [transition:border-radius_.3s_ease-in-out]"
-        >
-          <a href="" class="px-4 py-2" download> resume </a>
-          <span class="flex"> <DownloadIcon /></span>
-        </div>
+      <div class="text-center flex justify-center displaytext">
+        <p class="w-2/3 text-[#7b7b7b]">
+          creating simple, usable, interactive and functional interfaces
+        </p>
       </div>
     </header>
 
-    <section class="tabdetails border-[.5px] md:my-[13rem] my-[16rem]">
+    <section class="tabdetails border-[.5px] md:my-[13rem] my-[13rem]">
       <div
-        class="grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-12 w-full md:p-6 py-6"
+        class="grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:p-6 py-6"
       >
         {
           cards?.map((items) => (
-            <div class="border-t-[.5px] hover:bg-slate-50">
+            <div class="">
               <CardLayout title={items.title} videolink={items.videolink} slug={`${items.slug}`} />
             </div>
           ))
         }
       </div>
     </section>
-    <footer class="flex flex-row justify-center my-10 text-[#7b7b7b] gap-1 font-thin">
-      <span>Olajide Seun</span>
-      <span>|</span>
-      <span>Web developer</span>
+    <footer
+      class="flex md:flex-row flex-col gap-6 justify-center items-center my-20 text-[#7b7b7b]"
+    >
+      <div>
+        <span>Olajide Seun</span>
+        <span>|</span>
+        <span>Web developer</span>
+      </div>
+      <div class="group">
+        <a href="" class="flex text-black items-center gap-1 group-hover:font-semibold" download>
+          View Resume
+          <span class="hidden group-hover:flex"><Linkarrow /></span>
+        </a>
+      </div>
+
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" name="checkbox" title="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <em>Enable dark mode</em>
+      </div>
     </footer>
   </main>
 </Layout>
@@ -225,15 +234,12 @@ const cards = [
     }
   }
 
-  html {
-  }
-
   .headershit {
     position: fixed;
     top: 0;
     animation: heightdown linear both;
     z-index: 1;
-    background: #f7f7f7;
+    /* background: #f7f7f7; */
 
     border-bottom: none;
   }
@@ -262,21 +268,22 @@ const cards = [
       height: 7rem;
       font-size: 1em;
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
-      background: white;
+      background: var(--bg-color);
+      color: var(--font-color);
     }
   }
 
   @media screen and (max-width: 800px) {
     @keyframes heightdown {
       from {
-        height: 16rem;
+        height: 14rem;
         font-size: 1em;
       }
       to {
         height: 6rem;
         font-size: 1em;
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
-        background: white;
+        background: var(--bg-color);
       }
     }
   }
@@ -295,4 +302,82 @@ const cards = [
       opacity: 0;
     }
   }
+
+  /* theme switch */
+
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-switch-wrapper > em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+
+  .theme-switch > input {
+    display: none;
+  }
+
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+  }
+
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
 </style>
+
+<script>
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+  function switchTheme(e: Event) {
+    const checkboxEvent = e.target as HTMLInputElement;
+    if (checkboxEvent.checked) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+  }
+
+  toggleSwitch?.addEventListener("change", switchTheme, false);
+</script>

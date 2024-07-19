@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import Linkarrow from "../../../public/svgIcon/linkarrow.astro";
 import ArrowIcon from "../../../public/svgIcon/arrowIcon.astro";
 import CardLayout from "../../layouts/CardLayout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const pages = [
@@ -50,63 +50,54 @@ export async function getStaticPaths() {
 const { title, description, img, tags, slug } = Astro.props;
 ---
 
-<html>
-  <body>
-    <main class="!mx-6 md:mx-0">
-      <div class="md:w-[700px] w-full md:mx-auto relative flex flex-col h-full border gap-8">
-        <nav class="flex flex-row justify-between w-full mt-12">
-          <a
-            href="/"
-            data-astro-history="replace"
-            class="flex flex-row items-center gap-2 hover:font-bold"
-          >
-            <span class="[transform:scale(-1,1)]"><ArrowIcon /></span>
-            Back home</a
-          >
-          <a
-            href="#"
-            class="flex flex-row items-center gap-2 rounded-[10px] border-2 border-black hover:rounded-[20px] [transition:border-radius_.3s_ease-in-out] px-6 py-2"
-          >
-            Go to site
-            <Linkarrow />
-          </a>
-        </nav>
+<Layout title={slug}>
+  <html>
+    <body>
+      <main class="w-full">
+        <div class="md:w-[700px] w-full md:mx-auto relative flex flex-col gap-8">
+          <nav class="flex flex-row justify-between mx-6 md:mx-0 mt-12">
+            <a
+              href="/"
+              data-astro-history="replace"
+              class="flex flex-row items-center gap-2 hover:font-bold"
+            >
+              <span class="[transform:scale(-1,1)]"><ArrowIcon /></span>
+              Back home</a
+            >
+            <a
+              href="#"
+              class="flex flex-row items-center gap-2 rounded-[10px] border-2 border-black hover:rounded-[20px] [transition:border-radius_.3s_ease-in-out] px-6 py-2"
+            >
+              Go to site
+              <Linkarrow />
+            </a>
+          </nav>
 
-        <!-- <Image src={img} height={300} width={400} alt={""} class="w-full h-[25vw] rounded-[20px]" /> -->
-        <!-- <video
-          autoplay
-          loop
-          muted
-          playsinline
-          transition:persist={title}
-          class="object-fit h-full w-full rounded-[10px] overflow-hidden [transform:_scale(1)] group-hover:[transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%]"
-        >
-          <source src={img} />
-        </video>
-
-        <h2 class="text-2xl font-semibold">{title}</h2>
-
-       -->
-
-        <CardLayout title={title} , slug={slug} videolink={img} />
-        <p>{description}</p>
-        <ul class="flex flex-row gap-6 flex-wrap">
-          {
-            tags.map((item) => (
-              <li class="border bg-[#eaeaea] px-4 py-1 text-sm rounded-[10px] text-[#7b7b7b]">
-                {item}
-              </li>
-            ))
+          <CardLayout title={title} , slug={slug} videolink={img} />
+          <p class="mx-6 md:mx-0">{description}</p>
+          <ul class="flex flex-row gap-6 flex-wrap mx-6 md:mx-0">
+            {
+              tags.map((item) => (
+                <li class="border bg-[#eaeaea] px-4 py-1 text-sm rounded-[10px] text-[#7b7b7b]">
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </main>
+      <style>
+        @media screen and (max-width: 800px) {
+          .tobey {
+            width: 100%;
           }
-        </ul>
-      </div>
-    </main>
-    <style>
-      @media screen and (max-width: 800px) {
-        .tobey {
-          width: 100%;
         }
-      }
-    </style>
-  </body>
-</html>
+
+        body {
+          background-color: var(--bg-color);
+          color: var(--font-color);
+        }
+      </style>
+    </body>
+  </html>
+</Layout>
