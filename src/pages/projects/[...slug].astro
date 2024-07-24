@@ -3,6 +3,7 @@ import Linkarrow from "../../../public/svgIcon/linkarrow.astro";
 import ArrowIcon from "../../../public/svgIcon/arrowIcon.astro";
 import CardLayout from "../../layouts/CardLayout.astro";
 import Layout from "../../layouts/Layout.astro";
+import GithubIcon from "../../../public/svgIcon/githubIcon.astro";
 
 export async function getStaticPaths() {
   const pages = [
@@ -21,6 +22,8 @@ export async function getStaticPaths() {
         "react-query",
         "git",
       ],
+      site: "https://resume-builder-ys1u-shenkzjays-projects.vercel.app/",
+      github: "https://github.com/shenkzjay/resume-builder",
     },
 
     {
@@ -30,6 +33,8 @@ export async function getStaticPaths() {
         "A react code editor playground with code cell blocks that provides a rough sketch whiteboard for your codes",
       img: "../vid/neweditor.webm",
       tags: ["react", "typescript", "bulma.css", "redux-toolkit", "es-build", "CI/CD"],
+      site: "",
+      github: "https://github.com/shenkzjay/simple-code-editor",
     },
 
     {
@@ -39,6 +44,8 @@ export async function getStaticPaths() {
         "An ecommerce price comparison checker that get the price and variety of an item across some ecommerce platforms",
       img: "../vid/newecom.webm",
       tags: ["nextjs", "typescript", "playwright", "web-scraping", "docker"],
+      site: "",
+      github: "https://github.com/shenkzjay/Comparison-website/tree/compweb_v1.1",
     },
     {
       slug: "css-arts",
@@ -47,18 +54,20 @@ export async function getStaticPaths() {
         "A project inspired by lynn fisher for creating illustrations using pure css with single divs",
       img: "../vid/cssarts.webm",
       tags: ["pure css", "singledivs", "illustration"],
+      site: "https://www.csscanvas.com",
+      github: "https://github.com/shenkzjay/cssillustri",
     },
   ];
 
-  return pages.map(({ slug, title, description, img, tags }) => {
+  return pages.map(({ slug, title, description, img, tags, site, github }) => {
     return {
       params: { slug },
-      props: { title, description, img, tags, slug },
+      props: { title, description, img, tags, slug, site, github },
     };
   });
 }
 
-const { title, description, img, tags, slug } = Astro.props;
+const { title, description, img, tags, slug, site, github } = Astro.props;
 ---
 
 <Layout title={slug}>
@@ -70,18 +79,40 @@ const { title, description, img, tags, slug } = Astro.props;
             <a
               href="/"
               data-astro-history="replace"
-              class="flex flex-row items-center gap-2 hover:font-bold"
+              class="flex flex-row items-center gap-1 hover:font-bold"
             >
               <span class="[transform:scale(-1,1)]"><ArrowIcon /></span>
               Back home</a
             >
-            <a
-              href="#"
-              class="flex flex-row items-center gap-2 rounded-[10px] border-2 border-black hover:rounded-[20px] [transition:border-radius_.3s_ease-in-out] px-6 py-2"
-            >
-              Go to site
-              <Linkarrow />
-            </a>
+
+            <div class="flex flex-row gap-4">
+              {
+                github !== "" && (
+                  <a
+                    href={github}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="flex flex-row items-center gap-2 rounded-[10px]  hover:[transform:scale(1.2)] [transition:transform_.3s_ease-in-out]"
+                  >
+                    <GithubIcon />
+                  </a>
+                )
+              }
+
+              {
+                site !== "" && (
+                  <a
+                    href={site}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="flex flex-row items-center gap-2 rounded-[10px] border-2 border-black hover:rounded-[20px] [transition:border-radius_.3s_ease-in-out] px-4 py-2"
+                  >
+                    Go to site
+                    <Linkarrow />
+                  </a>
+                )
+              }
+            </div>
           </nav>
 
           <CardLayout title={title} , slug={slug} videolink={img} />
