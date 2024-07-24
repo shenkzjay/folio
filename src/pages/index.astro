@@ -102,7 +102,7 @@ const cards = [
         </div>
       </div>
 
-      <div class="text-center flex justify-center displaytext">
+      <div class="text-center flex justify-center displaytext overflow-hidden">
         <p class="w-2/3 text-[#676767]">
           creating simple, usable, interactive and functional interfaces
         </p>
@@ -132,7 +132,9 @@ const cards = [
       </div>
       <div class="group">
         <a
-          href="/public/resume.pdf"
+          href="/resume.pdf"
+          target="_blank"
+          rel="nonreferrer"
           class="flex text-black items-center gap-1 group-hover:font-semibold"
           download
         >
@@ -357,9 +359,9 @@ const cards = [
 
     @keyframes displaytext {
       to {
-        transform: translateY(0%, -100%);
-        visibility: hidden;
-        opacity: 0;
+        transform: translate(0%, -100%);
+        /* visibility: hidden;
+        opacity: 0; */
       }
     }
   }
