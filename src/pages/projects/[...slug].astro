@@ -9,40 +9,44 @@ export async function getStaticPaths() {
     {
       slug: "online-resume-creator",
       title: "Online Resume Creator",
-      description: "holly moly",
+      description:
+        "Create and customize your professional resume online. Download a pdf copy in minutes",
       img: "../vid/newrsume.webm",
       tags: [
         "react",
         "typescript",
         "redux-toolkit",
         "tailwindcss",
-        "pdfdownload",
-        "ci/cd",
-        "tiptap",
+        "html2pdf",
+        "react-query",
+        "git",
       ],
     },
 
     {
       slug: "react-online-code-editor",
       title: "React-Online-Code-Editor",
-      description: "holly moly",
+      description:
+        "A react code editor playground with code cell blocks that provides a rough sketch whiteboard for your codes",
       img: "../vid/neweditor.webm",
-      tags: ["react", "typescript", "Javascript", "redux-toolkit"],
+      tags: ["react", "typescript", "bulma.css", "redux-toolkit", "es-build", "CI/CD"],
     },
 
     {
       slug: "ecommerce-price-comparison",
       title: "E-commerce Price Comparison App",
-      description: "holly moly",
+      description:
+        "An ecommerce price comparison checker that get the price and variety of an item across some ecommerce platforms",
       img: "../vid/newecom.webm",
-      tags: ["react", "typescript", "redux-toolkit"],
+      tags: ["nextjs", "typescript", "playwright", "web-scraping", "docker"],
     },
     {
       slug: "css-arts",
       title: "Css Art Illustrations",
-      description: "Css art",
+      description:
+        "A project inspired by lynn fisher for creating illustrations using pure css with single divs",
       img: "../vid/cssarts.webm",
-      tags: ["css", "singlediv", "css-illustration"],
+      tags: ["pure css", "singledivs", "illustration"],
     },
   ];
 
@@ -85,7 +89,7 @@ const { title, description, img, tags, slug } = Astro.props;
           <ul class="flex flex-row gap-6 flex-wrap mx-6 md:mx-0">
             {
               tags.map((item) => (
-                <li class="border bg-[#eaeaea] px-4 py-1 text-sm rounded-[10px] text-[#7b7b7b]">
+                <li class="border bg-[#eaeaea] px-4 py-1 text-sm rounded-[10px] text-[#676767]">
                   {item}
                 </li>
               ))

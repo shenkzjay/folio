@@ -11,22 +11,28 @@ interface Props {
 const { title, videolink, slug } = Astro.props;
 ---
 
-<a class="flex group flex-col h-full justify-between gap-2 mx-6 md:mx-0" href={`/projects/${slug}`}>
+<a
+  class="flex group flex-col h-full justify-between gap-2 mx-6 md:mx-0"
+  href={`/projects/${slug}`}
+  aria-label={title}
+>
   <ViewTransitions />
   <div class="h-full w-full border overflow-hidden rounded-[10px]">
     <video
       autoplay
+      aria-label={title}
       loop
       muted
       playsinline
       transition:persist={slug}
-      class="object-fit h-full w-full rounded-[10px] overflow-hidden [transform:_scale(1)] group-hover:[transform:_scale(1.1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%]"
+      class="object-fit h-full w-full rounded-[10px] overflow-hidden [transform:_scale(1)] group-hover:[transform:_scale(1.1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none"
     >
       <source src={videolink} />
+      <track src="just a video" kind="captions" />
     </video>
   </div>
   <div class="flex flex-row items-center gap-2">
-    <h3 class="text-[#7b7b7b]">{title}</h3>
+    <h3 class="text-[#676767]" aria-label={title}>{title}</h3>
     <span><Linkarrow /></span>
   </div>
 </a>
