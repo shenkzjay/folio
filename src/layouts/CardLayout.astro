@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import Linkarrow from "../../public/svgIcon/linkarrow.astro";
 
 interface Props {
@@ -15,8 +14,8 @@ const { title, videolink, slug } = Astro.props;
   class="flex group flex-col h-full justify-between gap-2 mx-6 md:mx-0"
   href={`/projects/${slug}`}
   aria-label={title}
+  transition:name={title}
 >
-  <ViewTransitions />
   <div class="h-full w-full border overflow-hidden rounded-[10px]">
     <video
       autoplay
