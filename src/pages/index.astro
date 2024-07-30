@@ -110,17 +110,17 @@ const cards = [
     </header>
 
     <section class="tabdetails border-[.5px]">
-      <div
+      <ul
         class="grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:p-6 py-6"
       >
         {
           cards?.map((items) => (
-            <div class="" aria-label={items.title}>
+            <li class="" aria-label={items.title}>
               <CardLayout title={items.title} videolink={items.videolink} slug={`${items.slug}`} />
-            </div>
+            </li>
           ))
         }
-      </div>
+      </ul>
     </section>
     <footer
       class="flex md:flex-row flex-col gap-6 justify-center items-center my-20 text-[#676767]"
