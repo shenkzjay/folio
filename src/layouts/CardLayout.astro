@@ -5,33 +5,66 @@ interface Props {
   title: string;
   slug: string;
   videolink: string;
+  height: string;
 }
 
-const { title, videolink, slug } = Astro.props;
+const { title, videolink, slug, height } = Astro.props;
 ---
 
 <a
-  class="flex group flex-col h-full justify-between gap-2 mx-6 md:mx-0"
+  class="flex group flex-col h-full justify-between gap-3 mx-6 md:mx-0"
   href={`/projects/${slug}`}
   aria-label={title}
   transition:name={title}
 >
-  <div class="h-full w-full border overflow-hidden rounded-[10px]">
-    <video
-      autoplay
-      aria-label={title}
-      loop
-      muted
-      playsinline
-      transition:persist={slug}
-      class="object-fit h-full w-full rounded-[10px] overflow-hidden [transform:_scale(1)] group-hover:[transform:_scale(1.1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none"
-    >
-      <source src={videolink} />
-      <track src="just a video" kind="captions" />
-    </video>
+  <div
+    class=`relative bg-[#0D5F78] h-${height} w-full overflow-hidden rounded-[26px] outline outline-[3px] outline-black cardbg`
+  >
+    <div>
+      <video
+        autoplay
+        aria-label={title}
+        loop
+        muted
+        playsinline
+        transition:persist={slug}
+        class="object-fit h-full p-2 w-full rounded-[26px] overflow-hidden [transform:_scale(1)] group-hover:[transform:_scale(1.1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none"
+      >
+        <source src={videolink} />
+        <track src="just a video" kind="captions" />
+      </video>
+    </div>
   </div>
-  <div class="flex flex-row items-center gap-2">
-    <h3 class="text-[#676767]" aria-label={title}>{title}</h3>
-    <span><Linkarrow /></span>
+  <div
+    class="relative flex flex-row items-center justify-between bg-[#0D5F78] rounded-[12px] p-3 cardButton"
+  >
+    <h3 class="text-white z-10" aria-label={title}>{title}</h3>
+    <span class="flex z-10"><Linkarrow /></span>
   </div>
 </a>
+
+<style>
+  .cardbg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#1f92b7, #1f92b7);
+    width: 100%;
+    height: 95%;
+    border-radius: 26px;
+  }
+
+  .cardButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:
+      linear-gradient(45deg, rgba(255, 255, 255, 0.1) 49.5%, transparent 50%) no-repeat,
+      linear-gradient(#1f92b7, #1f92b7);
+    width: 100%;
+    height: 85%;
+    border-radius: 12px;
+  }
+</style>

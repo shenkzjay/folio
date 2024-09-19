@@ -25,7 +25,7 @@ const cards = [
   },
 
   {
-    title: "E-commerce Price Comparison App",
+    title: "E-commerce Price Checker",
     link: "",
     videolink: "vid/newecom.webm",
     slug: "ecommerce-price-comparison",
@@ -57,16 +57,25 @@ const cards = [
 <Layout title="homepage">
   <main class="md:w-[700px] md:mx-auto relative">
     <header
-      class="flex flex-col md:gap-4 border md:px-6 headershit md:w-[700px] w-full h-full md:mx-auto gap-10"
+      class="flex flex-col md:gap-4 border-black border-t-0 border-[3px] md:px-6 headershit md:w-[700px] w-full h-full md:mx-auto gap-10"
     >
+      <span class="w-4 bg-white h-6 absolute bottom-[0px] left-[-10px]"></span>
       <div
-        class="flex md:flex-row items-center justify-between md:my-6 mt-2 gap-8 headertop mx-6 md:mx-0"
+        class="flex md:flex-row items-center justify-between md:my-6 mt-2 gap-0 headertop mx-4 md:mx-0"
       >
         <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
-        <div class="flex flex-row items-center md:gap-4 gap-1 headername">
+        <div class="flex flex-row items-center md:gap-4 gap-4 headername">
           <div class="flex">
-            <span class="w-16 h-16 rounded-full overflow-hidden">
-              <Image src={Profile} width={100} height={100} alt="profile pics" />
+            <span
+              class="w-16 h-16 overflow-hidden rounded-[22px] outline outline-[6px] outline-offset-1 outline-[#FFB800]"
+            >
+              <Image
+                src={Profile}
+                width={100}
+                height={100}
+                alt="profile pics"
+                class={`outline outlie-white outline-offset-4`}
+              />
             </span>
           </div>
           <div class="flex flex-col mt-4 md:mt-0 w-full profilename">
@@ -80,24 +89,30 @@ const cards = [
         <div class="flex items-center gap-2">
           <a
             href="https://www.linkedin.com/in/oluwaseun-olajide-05017a124"
-            class="hover:[transform:translateY(-5px)] [transition:.3s_ease-in]"
+            class="relative hover:[transform:translateY(-5px)] [transition:.3s_ease-in] w-9 h-9 rounded-[12px] bg-[#073F7A] outline outline-[3px] outline-black iconbutton flex items-center justify-center text-black"
             aria-label="linkedin-profile-link"
           >
-            <LinkedIcon />
+            <span class="flex z-10 relative">
+              <LinkedIcon />
+            </span>
           </a>
           <a
             href="https://github.com/shenkzjay"
-            class="hover:[transform:translateY(-5px)] [transition:.3s_ease-in]"
+            class="relative hover:[transform:translateY(-5px)] [transition:.3s_ease-in] w-9 h-9 rounded-[12px] bg-[#1182A6] outline outline-[3px] outline-black giticonbutton flex items-center justify-center text-black"
             aria-label="github-profile-link"
           >
-            <GithubIcon />
+            <span class="z-10 relative w-6 h-6">
+              <GithubIcon />
+            </span>
           </a>
           <a
             href="mailto:senksjay@gmail.com"
-            class="hover:[transform:translateY(-5px)] [transition:.3s_ease-in]"
+            class="relative hover:[transform:translateY(-5px)] [transition:.3s_ease-in] w-9 h-9 rounded-[12px] bg-[#D07E32] outline outline-[3px] outline-black mailiconbutton flex items-center justify-center text-black"
             aria-label="email-link"
           >
-            <MailIcon />
+            <span class="flex z-10 relative">
+              <MailIcon />
+            </span>
           </a>
         </div>
       </div>
@@ -109,21 +124,27 @@ const cards = [
       </div>
     </header>
 
-    <section class="tabdetails border-[.5px]">
+    <section class="tabdetails border-l-[3px] border-r-[3px] border-black">
+      <span class="w-4 h-12 absolute right-[-5px] top-64 hidden md:flex bg-white"></span>
       <ul
-        class="grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:p-6 py-6"
+        class="grid md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:p-10 py-16"
       >
         {
           cards?.map((items) => (
             <li class="" aria-label={items.title}>
-              <CardLayout title={items.title} videolink={items.videolink} slug={`${items.slug}`} />
+              <CardLayout
+                title={items.title}
+                videolink={items.videolink}
+                slug={`${items.slug}`}
+                height="12rem"
+              />
             </li>
           ))
         }
       </ul>
     </section>
     <footer
-      class="flex md:flex-row flex-col gap-6 justify-center items-center my-20 text-[#676767]"
+      class="flex md:flex-row flex-col gap-6 justify-center items-center my-10 text-[#676767]"
     >
       <div>
         <span>Olajide Seun</span>
@@ -155,6 +176,73 @@ const cards = [
 </Layout>
 
 <style>
+  .iconbutton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#0558af, #0558af);
+    width: 100%;
+    height: 90%;
+    border-radius: 12px;
+  }
+
+  .iconbutton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse, white 49.5%, transparent 50%) 0% 0% / 1rem 0.3rem no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transform: skew(0deg, -20deg);
+  }
+
+  .giticonbutton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse, white 49.5%, transparent 50%) 0% 0% / 1rem 0.3rem no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transform: skew(0deg, -20deg);
+  }
+  .giticonbutton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#09b2e8, #09b2e8);
+    width: 100%;
+    height: 90%;
+    border-radius: 12px;
+  }
+
+  .mailiconbutton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse, white 49.5%, transparent 50%) 0% 0% / 1rem 0.3rem no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transform: skew(0deg, -20deg);
+  }
+  .mailiconbutton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#f9e163, #f9e163);
+    width: 100%;
+    height: 90%;
+    border-radius: 12px;
+  }
+
   .chatcard::before {
     content: "";
     position: absolute;
@@ -265,11 +353,12 @@ const cards = [
       z-index: 1;
       /* background: #f7f7f7; */
 
-      border-bottom: none;
+      /* border-bottom: none; */
     }
 
     .tabdetails {
-      margin: 13rem 0;
+      margin-top: 13rem;
+      margin-bottom: 5rem;
     }
 
     .displaytext {

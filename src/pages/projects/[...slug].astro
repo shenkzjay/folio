@@ -1,6 +1,7 @@
 ---
 import Linkarrow from "../../../public/svgIcon/linkarrow.astro";
 import ArrowIcon from "../../../public/svgIcon/arrowIcon.astro";
+import BackButton from "../../../public/svgIcon/backbutton.astro";
 import CardLayout from "../../layouts/CardLayout.astro";
 import Layout from "../../layouts/Layout.astro";
 import GithubIcon from "../../../public/svgIcon/githubIcon.astro";
@@ -39,7 +40,7 @@ export async function getStaticPaths() {
 
     {
       slug: "ecommerce-price-comparison",
-      title: "E-commerce Price Comparison App",
+      title: "E-commerce Price Checker",
       description:
         "An ecommerce price comparison checker that get the price and variety of an item across some ecommerce platforms",
       img: "../vid/newecom.webm",
@@ -76,13 +77,12 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
       <main class="w-full">
         <div class="md:w-[700px] w-full md:mx-auto relative flex flex-col gap-8">
           <nav class="flex flex-row justify-between mx-6 md:mx-0 mt-12">
-            <a
-              href="/"
-              data-astro-history="replace"
-              class="flex flex-row items-center gap-1 hover:font-bold"
-            >
-              <span class="[transform:scale(-1,1)]"><ArrowIcon /></span>
-              Back home</a
+            <a href="/" data-astro-history="replace" class="flex flex-row items-center group gap-1">
+              <span
+                class="flex group-active:[transform:scaleY(0.8)] justify-center items-center w-8 h-8 p-2 rounded-[12px] mr-2"
+                ><BackButton /></span
+              >
+              Back</a
             >
 
             <div class="flex flex-row gap-4">
@@ -92,9 +92,11 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
                     href={github}
                     target="_blank"
                     rel="noreferrer"
-                    class="flex flex-row items-center gap-2 rounded-[10px]  hover:[transform:scale(1.2)] [transition:transform_.3s_ease-in-out]"
+                    class="flex relative w-10 flex-row items-center gap-2 rounded-[10px]  hover:[transform:scale(1.2)] [transition:transform_.3s_ease-in-out]  text-black "
                   >
-                    <GithubIcon />
+                    <span class="z-10 w-10 h-10">
+                      <GithubIcon />
+                    </span>
                   </a>
                 )
               }
@@ -105,23 +107,24 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
                     href={site}
                     target="_blank"
                     rel="noreferrer"
-                    class="flex flex-row items-center gap-2 rounded-[10px] border-2 border-black hover:rounded-[20px] [transition:border-radius_.3s_ease-in-out] px-4 py-2"
+                    class="flex  active:[transform:scaleY(0.9)] hover:[transform:scale(1.1)] [transition:transform_300ms_ease-in]  text-black relative flex-row items-center gap-2 rounded-[16px] border-2 border-black  px-4 py-2 bg-[#C9C7C7] gotoSiteButton"
                   >
-                    Go to site
-                    <Linkarrow />
+                    <span class="z-10">Go to site</span>
+                    {/* <Linkarrow /> */}
                   </a>
                 )
               }
             </div>
           </nav>
 
-          <CardLayout title={title} , slug={slug} videolink={img} />
+          <CardLayout title={title} , slug={slug} videolink={img} height="27" />
           <p class="mx-6 md:mx-0">{description}</p>
           <ul class="flex flex-row gap-4 flex-wrap mx-6 md:mx-0">
             {
               tags.map((item) => (
-                <li class="border bg-[#eaeaea] px-4 py-1 text-sm rounded-[10px] text-[#676767]">
-                  {item}
+                <li class="outline flex relative bg-black px-4 py-1 text-sm rounded-[10px] text-[#676767]  ">
+                  <p class="z-10">{item}</p>
+                  <span class="tags flex" />
                 </li>
               ))
             }
@@ -139,6 +142,57 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
           background-color: var(--bg-color);
           color: var(--font-color);
         }
+
+        .gotoSiteButton::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(#e6eaee, #e6eaee) no-repeat;
+          width: 100%;
+          height: 90%;
+          border-radius: 12px;
+        }
+
+        .gotoSiteButton::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background:
+            radial-gradient(ellipse, rgba(255, 255, 255, 1) 49%, transparent 50%) 5% 5%/ 1.5rem 0.4rem
+              no-repeat,
+            linear-gradient(#c9c7c7, #c9c7c7) 50% 0 / 100% 100% no-repeat;
+          width: 90%;
+          height: 80%;
+          margin: 0 6px;
+          border-radius: 12px;
+        }
+
+        .tags {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(white, white) no-repeat;
+          width: 100%;
+          height: 90%;
+          border-radius: 10px;
+        }
+
+        /* 
+        .gotoSiteButton::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: radial-gradient(ellipse, white 49.5%, transparent 50%) 0% 0% / 1rem 0.3rem
+            no-repeat;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          transform: skew(0deg, -20deg);
+        } */
       </style>
     </body>
   </html>
