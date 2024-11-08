@@ -77,25 +77,30 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
       <main class="w-full">
         <div class="md:w-[700px] w-full md:mx-auto relative flex flex-col gap-8">
           <nav class="flex flex-row justify-between mx-6 md:mx-0 mt-12">
-            <a href="/" data-astro-history="replace" class="flex flex-row items-center group gap-1">
-              <span
+            <a
+              href="/"
+              data-astro-history="replace"
+              class="flex flex-row items-center group gap-1 underline"
+            >
+              <!-- <span
                 class="flex group-active:[transform:scaleY(0.8)] justify-center items-center w-8 h-8 p-2 rounded-[12px] mr-2"
                 ><BackButton /></span
-              >
-              Back</a
+              > -->
+              ← Back</a
             >
 
-            <div class="flex flex-row gap-4">
+            <div class="flex flex-row gap-10">
               {
                 github !== "" && (
                   <a
                     href={github}
                     target="_blank"
                     rel="noreferrer"
-                    class="flex relative w-10 flex-row items-center gap-2 rounded-[10px]  hover:[transform:scale(1.2)] [transition:transform_.3s_ease-in-out]  text-black "
+                    class="flex relative underline hover:[transform:translateY(-5px)] [transition:.3s_ease-in] "
                   >
-                    <span class="z-10 w-10 h-10">
-                      <GithubIcon />
+                    <span class="">
+                      {/* <GithubIcon /> */}
+                      Github
                     </span>
                   </a>
                 )
@@ -107,7 +112,7 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
                     href={site}
                     target="_blank"
                     rel="noreferrer"
-                    class="flex  active:[transform:scaleY(0.9)] hover:[transform:scale(1.1)] [transition:transform_300ms_ease-in]  text-black relative flex-row items-center gap-2 rounded-[16px] border-2 border-black  px-4 py-2 bg-[#C9C7C7] gotoSiteButton"
+                    class=" flex relative underline hover:[transform:translateY(-5px)] [transition:.3s_ease-in]"
                   >
                     <span class="z-10">Go to site</span>
                     {/* <Linkarrow /> */}
@@ -122,7 +127,7 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
           <ul class="flex flex-row gap-4 flex-wrap mx-6 md:mx-0">
             {
               tags.map((item) => (
-                <li class="outline flex relative bg-black px-4 py-1 text-sm rounded-[10px] text-[#676767]  ">
+                <li class="outline flex !w-fit  px-4 py-1 text-sm  text-[#676767] card-halftone ">
                   <p class="z-10">{item}</p>
                   <span class="tags flex" />
                 </li>
@@ -193,6 +198,34 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
           border-radius: 12px;
           transform: skew(0deg, -20deg);
         } */
+
+        .card-halftone {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background: white;
+        }
+
+        .card-halftone:hover {
+          border: 2px solid black;
+        }
+
+        .card-halftone::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          top: 0.4rem;
+          left: 0.4rem;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle, black 0.03rem, transparent 0%),
+            radial-gradient(circle, black 0.02rem, transparent 0%);
+          background-size: 0.15rem 0.15rem;
+          background-position:
+            0 0,
+            0.15rem 0.15rem;
+          z-index: -1;
+        }
       </style>
     </body>
   </html>

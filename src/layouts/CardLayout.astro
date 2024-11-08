@@ -17,10 +17,8 @@ const { title, videolink, slug, height } = Astro.props;
   aria-label={title}
   transition:name={title}
 >
-  <div
-    class=`relative bg-[#0D5F78] h-${height} w-full overflow-hidden rounded-[26px] outline outline-[3px] outline-black cardbg`
-  >
-    <div>
+  <div class=`h-${height} w-full card-halftone p-1 `>
+    <div class="outline outline-black outline-offset-4">
       <video
         autoplay
         aria-label={title}
@@ -28,18 +26,15 @@ const { title, videolink, slug, height } = Astro.props;
         muted
         playsinline
         transition:persist={slug}
-        class="object-fit h-full p-2 w-full rounded-[26px] overflow-hidden [transform:_scale(1)] group-hover:[transform:_scale(1.1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none"
+        class="object-fit h-full w-full [transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none"
       >
         <source src={videolink} />
         <track src="just a video" kind="captions" />
       </video>
     </div>
   </div>
-  <div
-    class="relative flex flex-row items-center justify-between bg-[#0D5F78] rounded-[12px] p-3 cardButton"
-  >
-    <h3 class="text-white z-10" aria-label={title}>{title}</h3>
-    <span class="flex z-10"><Linkarrow /></span>
+  <div class="relative flex flex-row items-center justify-between">
+    <h3 class="text-black font-bold z-10" aria-label={title}>{title}</h3>
   </div>
 </a>
 
@@ -66,5 +61,33 @@ const { title, videolink, slug, height } = Astro.props;
     width: 100%;
     height: 85%;
     border-radius: 12px;
+  }
+
+  .card-halftone {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+
+  .card-halftone:hover {
+    border: 2px solid black;
+  }
+
+  .card-halftone::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 0.4rem;
+    left: 0.4rem;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, black 0.03rem, transparent 0%),
+      radial-gradient(circle, black 0.02rem, transparent 0%);
+    background-size: 0.15rem 0.15rem;
+    background-position:
+      0 0,
+      0.15rem 0.15rem;
+    z-index: -1;
   }
 </style>

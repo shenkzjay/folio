@@ -57,7 +57,7 @@ const cards = [
 <Layout title="homepage">
   <main class="md:w-[700px] md:mx-auto relative">
     <header
-      class="flex flex-col md:gap-4 border-black border-t-0 border-[3px] md:px-6 headershit md:w-[700px] w-full h-full md:mx-auto gap-10"
+      class="flex flex-col md:gap-4 b md:px-6 headershit md:w-[700px] w-full h-full md:mx-auto gap-10"
     >
       <span class="w-4 bg-white h-6 absolute bottom-[0px] left-[-10px]"></span>
       <div
@@ -66,15 +66,13 @@ const cards = [
         <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
         <div class="flex flex-row items-center md:gap-4 gap-4 headername">
           <div class="flex">
-            <span
-              class="w-16 h-16 overflow-hidden rounded-[22px] outline outline-[6px] outline-offset-1 outline-[#FFB800]"
-            >
+            <span class="w-16 h-16 p-1 bg-white profilepics-halftone">
               <Image
                 src={Profile}
                 width={100}
                 height={100}
                 alt="profile pics"
-                class={`outline outlie-white outline-offset-4`}
+                class={`outline outline-black outline-offset-4`}
               />
             </span>
           </div>
@@ -86,7 +84,9 @@ const cards = [
           </div>
         </div>
 
-        <div class="flex items-center gap-2">
+        <!-- Icon social links -->
+
+        <!-- <div class="flex items-center gap-2">
           <a
             href="https://www.linkedin.com/in/oluwaseun-olajide-05017a124"
             class="relative hover:[transform:translateY(-5px)] [transition:.3s_ease-in] w-9 h-9 rounded-[12px] bg-[#073F7A] outline outline-[3px] outline-black iconbutton flex items-center justify-center text-black"
@@ -114,6 +114,21 @@ const cards = [
               <MailIcon />
             </span>
           </a>
+        </div> -->
+        <div class="flex flex-col links cursor-pointer underline gap-1 text-sm">
+          <a
+            class="relative hover:[transform:translateY(-3px)] [transition:.3s_ease-in]"
+            href='href="https://www.linkedin.com/in/oluwaseun-olajide-05017a124'>LinkedIn</a
+          >
+          <a
+            href="https://github.com/shenkzjay"
+            class="relative hover:[transform:translateY(-3px)] [transition:.3s_ease-in]"
+            href="">Github</a
+          >
+          <a
+            class="relative hover:[transform:translateY(-3px)] [transition:.3s_ease-in]"
+            href="mailto:senksjay@gmail.com">Email</a
+          >
         </div>
       </div>
 
@@ -124,10 +139,10 @@ const cards = [
       </div>
     </header>
 
-    <section class="tabdetails border-l-[3px] border-r-[3px] border-black">
+    <section class="tabdetails">
       <span class="w-4 h-12 absolute right-[-5px] top-64 hidden md:flex bg-white"></span>
       <ul
-        class="grid md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:p-10 py-16"
+        class="grid md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:py-10 md:px-6 py-16"
       >
         {
           cards?.map((items) => (
@@ -356,6 +371,10 @@ const cards = [
       /* border-bottom: none; */
     }
 
+    .links {
+      animation: reduce-fontsize linear both;
+    }
+
     .tabdetails {
       margin-top: 13rem;
       margin-bottom: 5rem;
@@ -377,7 +396,8 @@ const cards = [
     .displaytext,
     .headershit,
     .headername,
-    .headernametext {
+    .headernametext,
+    .links {
       animation-timeline: scroll();
       animation-range: 0px 150px;
     }
@@ -434,9 +454,9 @@ const cards = [
         }
       }
 
-      .profilename {
+      /* .profilename {
         transform: translateY(-15%);
-      }
+      } */
     }
 
     @keyframes reducetext {
@@ -448,9 +468,15 @@ const cards = [
 
     @keyframes displaytext {
       to {
-        transform: translate(0%, -100%);
+        transform: translate(0%, -200%);
         /* visibility: hidden;
         opacity: 0; */
+      }
+    }
+
+    @keyframes reduce-fontsize {
+      to {
+        font-size: 12px;
       }
     }
   }
@@ -514,6 +540,29 @@ const cards = [
 
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .profilepics-halftone {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .profilepics-halftone::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 0.35rem;
+    left: 0.35rem;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1a1a1a 0.02rem, transparent 0%),
+      radial-gradient(circle, #c4c4c4 0.02rem, transparent 0%);
+    background-size: 0.1rem 0.15rem;
+    background-position:
+      0 0,
+      0.15rem 0.15rem;
+    z-index: -1;
   }
 </style>
 
