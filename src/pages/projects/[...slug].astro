@@ -1,10 +1,10 @@
 ---
-import Linkarrow from "../../../public/svgIcon/linkarrow.astro";
-import ArrowIcon from "../../../public/svgIcon/arrowIcon.astro";
-import BackButton from "../../../public/svgIcon/backbutton.astro";
+// import Linkarrow from "../../../public/svgIcon/linkarrow.astro";
+// import ArrowIcon from "../../../public/svgIcon/arrowIcon.astro";
+// import BackButton from "../../../public/svgIcon/backbutton.astro";
 import CardLayout from "../../layouts/CardLayout.astro";
 import Layout from "../../layouts/Layout.astro";
-import GithubIcon from "../../../public/svgIcon/githubIcon.astro";
+// import GithubIcon from "../../../public/svgIcon/githubIcon.astro";
 
 export async function getStaticPaths() {
   const pages = [
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
       slug: "online-resume-creator",
       title: "Online Resume Creator",
       description:
-        "Create and customize your professional resume online. Download a pdf copy in minutes",
+        "An online resume editor that lets you easily select a layout, customize and download your resume as a pdf file",
       img: "../vid/newrsume.webm",
       tags: [
         "react",
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
       slug: "ecommerce-price-comparison",
       title: "E-commerce Price Checker",
       description:
-        "An ecommerce price comparison checker that get the price and variety of an item across some ecommerce platforms",
+        "An ecommerce price comparison checker that get the price and variety of items across some ecommerce platforms",
       img: "../vid/newecom.webm",
       tags: ["nextjs", "typescript", "playwright", "web-scraping", "docker"],
       site: "",
@@ -52,11 +52,21 @@ export async function getStaticPaths() {
       slug: "css-arts",
       title: "Css Art Illustrations",
       description:
-        "A project inspired by lynn fisher for creating illustrations using pure css with single divs",
-      img: "../vid/cssarts.webm",
+        "A lynn fisher inspired project for creating cool illustrations using pure css on a single div",
+      img: " ../vid/cssarts.webm",
       tags: ["pure css", "singledivs", "illustration"],
       site: "https://cssillustrations.netlify.app/",
       github: "https://github.com/shenkzjay/cssillustri",
+    },
+    {
+      slug: "football-ranking-app",
+      title: "Football league ranking app",
+      description:
+        "A football league app to rank teams according to their performance, keep track of players statictics and update scores live!",
+      img: " ../vid/proed.mp4",
+      tags: ["nextjs", "tailwindcss", "postgress", "drizzle"],
+      site: "https://futball-eight.vercel.app/",
+      github: "https://github.com/shenkzjay/football-league-ranking-app",
     },
   ];
 
@@ -79,7 +89,7 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
           <nav class="flex flex-row justify-between mx-6 md:mx-0 mt-12">
             <a
               href="/"
-              onclick="return document.documentElement.dataset.transitionFrom === '/' && history.state.index > 0 ? (history.back(), false) : undefined"
+              onclick="history.back()"
               id="back-button"
               data-astro-history="push"
               class="flex flex-row items-center group gap-1 underline"

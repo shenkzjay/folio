@@ -2,10 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import CardLayout from "../layouts/CardLayout.astro";
-import LinkedIcon from "../../public/svgIcon/linkedIcon.astro";
-import GithubIcon from "../../public/svgIcon/githubIcon.astro";
-import MailIcon from "../../public/svgIcon/mailIcon.astro";
-import DownloadIcon from "../../public/svgIcon/downloadIcon.astro";
+// import LinkedIcon from "../../public/svgIcon/linkedIcon.astro";
+// import GithubIcon from "../../public/svgIcon/githubIcon.astro";
+// import MailIcon from "../../public/svgIcon/mailIcon.astro";
+// import DownloadIcon from "../../public/svgIcon/downloadIcon.astro";
 import Linkarrow from "../../public/svgIcon/linkarrow.astro";
 import Profile from "../../public/vid/profile.jpg";
 
@@ -36,6 +36,12 @@ const cards = [
     link: "",
     videolink: "vid/cssarts.webm",
     slug: "css-arts",
+  },
+  {
+    title: "Football league ranking app",
+    link: "",
+    videolink: "vid/proed.mp4",
+    slug: "football-ranking-app",
   },
 
   // {
@@ -133,16 +139,14 @@ const cards = [
       </div>
 
       <div class="text-center flex justify-center displaytext overflow-hidden">
-        <p class="w-2/3 text-[#676767]">
-          creating simple, usable, interactive and functional interfaces
-        </p>
+        <p class="w-2/3 text-[#676767]">I create clean and functional application</p>
       </div>
     </header>
 
     <section class="tabdetails">
       <span class="w-4 h-12 absolute right-[-5px] top-64 hidden md:flex bg-white"></span>
       <ul
-        class="grid md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:py-10 md:px-6 py-16"
+        class="grid md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 w-full md:py-0 md:px-6"
       >
         {
           cards?.map((items) => (
@@ -159,7 +163,7 @@ const cards = [
       </ul>
     </section>
     <footer
-      class="flex md:flex-row flex-col gap-6 justify-center items-center my-10 text-[#676767]"
+      class="flex md:flex-row flex-col gap-2 justify-center items-center my-10 text-[#676767]"
     >
       <div>
         <span>Olajide Seun</span>

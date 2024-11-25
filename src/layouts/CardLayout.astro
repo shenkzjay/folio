@@ -1,5 +1,5 @@
 ---
-import Linkarrow from "../../public/svgIcon/linkarrow.astro";
+// import Linkarrow from "../../public/svgIcon/linkarrow.astro";
 
 interface Props {
   title: string;
@@ -15,7 +15,7 @@ const { title, videolink, slug, height } = Astro.props;
   class="flex group flex-col h-full justify-between gap-3 mx-6 md:mx-0"
   href={`/projects/${slug}`}
   aria-label={title}
-  transition:name={title}
+  transition:name={slug}
 >
   <div class=`h-${height} w-full card-halftone p-1 `>
     <div class="outline outline-black outline-offset-4">
