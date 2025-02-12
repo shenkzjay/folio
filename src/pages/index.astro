@@ -13,40 +13,42 @@ const cards = [
   {
     title: "Online Resume Creator",
     link: "",
-    videolink: "vid/newrsume.webm",
+    videolink:
+      "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
     slug: "online-resume-creator",
   },
   {
     title: "Telegram clicker game app",
     link: "",
-    videolink: "vid/coin.webm",
+    videolink: "https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
     slug: "telegram-click-app",
   },
   {
     title: "Football league ranking app",
     link: "",
-    videolink: "vid/proed.mp4",
+    videolink: "https://ik.imagekit.io/tke5fzwem/proed.mp4?updatedAt=1739371582651",
     slug: "football-ranking-app",
   },
 
   {
     title: "React-Online-Code-Editor",
     link: "",
-    videolink: "vid/neweditor.webm",
+    videolink:
+      "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
     slug: "react-online-code-editor",
   },
 
   {
     title: "E-commerce Price Checker",
     link: "",
-    videolink: "vid/newecom.webm",
+    videolink: "https://ik.imagekit.io/tke5fzwem/newecom.webm/ik-video.mp4?updatedAt=1739371542713",
     slug: "ecommerce-price-comparison",
   },
 
   {
     title: "Css Art Illustrations",
     link: "",
-    videolink: "vid/cssarts.webm",
+    videolink: "https://ik.imagekit.io/tke5fzwem/cssarts.webm/ik-video.mp4?updatedAt=1739371534205",
     slug: "css-arts",
   },
 
@@ -78,7 +80,7 @@ const cards = [
         <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
         <div class="flex flex-row items-center justify-center md:gap-4 gap-4 headername">
           <div class="flex">
-            <span class="w-16 h-16 p-1 bg-white profilepics-halftone">
+            <span class="w-16 h-16 p-1 bg-white profilepics-halftone propics">
               <Image
                 src={Profile}
                 width={100}
@@ -398,6 +400,10 @@ const cards = [
       animation: reducetext linear both;
     }
 
+    .propics {
+      animation: shrinkpics linear both;
+    }
+
     .headername {
       animation: scaledownheaderpics linear both;
     }
@@ -405,6 +411,7 @@ const cards = [
     .headertop,
     .displaytext,
     .headershit,
+    .propics,
     .headername,
     .headernametext,
     .links {
@@ -416,9 +423,17 @@ const cards = [
       animation: movetextup linear both;
     }
 
+    @keyframes shrinkpics {
+      to {
+        transform: scale(0);
+        transform-origin: left center;
+      }
+    }
+
     @keyframes scaledownheaderpics {
       to {
-        transform: scale(0.7);
+        transform: scale(0.7) translateX(-5.5rem);
+
         transform-origin: left center;
       }
     }
@@ -437,6 +452,12 @@ const cards = [
       }
     }
 
+    /* @keyframes shrinkpics {
+      to {
+        display: none;
+      }
+    } */
+
     @media screen and (max-width: 800px) {
       @keyframes heightdown {
         from {
@@ -451,6 +472,13 @@ const cards = [
         }
       }
 
+      @keyframes shrinkpics {
+        to {
+          transform: scale(0);
+          transform-origin: left center;
+        }
+      }
+
       @keyframes scaledownheaderpics {
         from {
           transform: scale(0.8);
@@ -458,7 +486,7 @@ const cards = [
           transition: transform 0.3s ease-in-out;
         }
         to {
-          transform: scale(0.7);
+          transform: scale(0.7) translateX(-5.5rem);
           transform-origin: left;
           transition: transform 0.3s ease-in-out;
         }
