@@ -17,33 +17,35 @@ export const cards = [
   {
     title: "Online Resume Creator",
     link: "",
-    videolink: "../../public/vid/newrsume.webm",
+    videolink:
+      "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
     slug: "online-resume-creator",
   },
   {
     title: "Telegram clicker game app",
     link: "",
-    videolink: "../../public/coin.webm",
+    videolink: "https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
     slug: "telegram-click-app",
   },
   {
     title: "Football league ranking app",
     link: "",
-    videolink: "../../public/proed.mp4",
+    videolink: "https://ik.imagekit.io/tke5fzwem/proed.mp4?updatedAt=1739371582651",
     slug: "football-ranking-app",
   },
 
   {
     title: "React-Online-Code-Editor",
     link: "",
-    videolink: "../../public/neweditor.webm",
+    videolink:
+      "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
     slug: "react-online-code-editor",
   },
 
   {
     title: "E-commerce Price Checker",
     link: "",
-    videolink: "../../public/newecom.webm",
+    videolink: "https://ik.imagekit.io/tke5fzwem/newecom.webm/ik-video.mp4?updatedAt=1739371542713",
     slug: "ecommerce-price-comparison",
   },
 
