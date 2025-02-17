@@ -1,4 +1,4 @@
-import AI from "../../public/vid/ai vid.webm";
+import AI from "../../public/vid/aivid.webm";
 import estate from "../../public/vid/estatennn.webm";
 
 export const cards = [
