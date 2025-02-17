@@ -4,10 +4,32 @@
 // import BackButton from "../../../public/svgIcon/backbutton.astro";
 import CardLayout from "../../layouts/CardLayout.astro";
 import Layout from "../../layouts/Layout.astro";
+import AIagent from "../../../public/image.png";
+import AI from "../../public/vid/ai vid.webm";
+import estate from "../../public/vid/estatennn.webm";
 // import GithubIcon from "../../../public/svgIcon/githubIcon.astro";
 
 export async function getStaticPaths() {
   const pages = [
+    {
+      slug: "estate-management",
+      title: "Estate/Gated community access control management app",
+      description:
+        "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc *demo - username:killasenk@gmail.com password:123*",
+      img: `${estate}`,
+      tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
+      site: "https://https://estatepro-taupe.vercel.app/dashboard",
+      github: "https://github.com/shenkzjay/remixchatbot",
+    },
+    {
+      slug: "ai-agent-bot",
+      title: "RAG AI agent with remix and langgraph",
+      description: "A RAG AI agent bot created using remix js, Langchain and Langgraph.",
+      img: `${AI}`,
+      tags: ["ai", "remixjs", "langchain", "langgraph", "pinecone", "gemini-flash 1.5 api"],
+      site: "https://remixchatbot.vercel.app/",
+      github: "https://github.com/shenkzjay/remixchatbot",
+    },
     {
       slug: "online-resume-creator",
       title: "Online Resume Creator",
@@ -96,7 +118,7 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
   <html>
     <body>
       <main class="w-full">
-        <div class="md:w-[700px] w-full md:mx-auto relative flex flex-col gap-8">
+        <div class="md:w-[700px] w-full md:mx-auto relative flex flex-col gap-8 mb-20">
           <nav class="flex flex-row justify-between mx-6 md:mx-0 mt-12">
             <a
               href="/"

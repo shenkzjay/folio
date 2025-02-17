@@ -8,64 +8,46 @@ import CardLayout from "../layouts/CardLayout.astro";
 // import DownloadIcon from "../../public/svgIcon/downloadIcon.astro";
 import Linkarrow from "../../public/svgIcon/linkarrow.astro";
 import Profile from "../../public/vid/profile.jpg";
+import AIagent from "../../public/image.png";
+import { cards } from "../components/carddata";
 
-const cards = [
-  {
-    title: "Online Resume Creator",
-    link: "",
-    videolink:
-      "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
-    slug: "online-resume-creator",
-  },
-  {
-    title: "Telegram clicker game app",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
-    slug: "telegram-click-app",
-  },
-  {
-    title: "Football league ranking app",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/proed.mp4?updatedAt=1739371582651",
-    slug: "football-ranking-app",
-  },
+const itemsPerPage = 6;
+let currentPage = 1;
 
-  {
-    title: "React-Online-Code-Editor",
-    link: "",
-    videolink:
-      "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
-    slug: "react-online-code-editor",
-  },
+const totalPages = Math.ceil(cards.length / itemsPerPage);
+const startIndexSN = (currentPage - 1) * itemsPerPage;
 
-  {
-    title: "E-commerce Price Checker",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/newecom.webm/ik-video.mp4?updatedAt=1739371542713",
-    slug: "ecommerce-price-comparison",
-  },
+const indexOfLastPage = currentPage * itemsPerPage;
+const indexOfFirstPage = indexOfLastPage - itemsPerPage;
+let currentPageItems = cards.slice(indexOfFirstPage, indexOfLastPage);
 
-  {
-    title: "Css Art Illustrations",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/cssarts.webm/ik-video.mp4?updatedAt=1739371534205",
-    slug: "css-arts",
-  },
+function paginateMe(pageNumber: number) {
+  currentPage = pageNumber;
+  const newIndexOfLastPage = currentPage * itemsPerPage;
+  const newIndexOfFirstPage = newIndexOfLastPage - itemsPerPage;
+  currentPageItems = cards.slice(newIndexOfFirstPage, newIndexOfLastPage);
+  renderItems();
+}
 
-  // {
-  //   title: "React-Online-Code-Editor",
-  //   link: "",
-  //   videolink: "vid/neweditor.webm",
-  //   slug: "react-online-code-editor",
-  // },
-
-  // {
-  //   title: "E-commerce Price Comparison App",
-  //   link: "",
-  //   videolink: "vid/newecom.webm",
-  //   slug: "ecommerce-price-comparison",
-  // },
-];
+function renderItems() {
+  const itemsContainer = document.querySelector(".items-container");
+  if (itemsContainer) {
+    itemsContainer.innerHTML = currentPageItems
+      .map(
+        (items) => `
+      <li class="" aria-label="${items.title}">
+        <CardLayout
+          title="${items.title}"
+          videolink="${items.videolink}"
+          slug="${items.slug}"
+          height="12rem"
+        />
+      </li>
+    `
+      )
+      .join("");
+  }
+}
 ---
 
 <Layout title="homepage">
@@ -169,6 +151,15 @@ const cards = [
           ))
         }
       </ul>
+      <!-- <div class="mt-4 flex justify-center gap-2 md:gao-4">
+        {
+          Array.from({ length: totalPages }, (_, i) => (
+            <button class="paginationBtn" onclick={`paginateMe(${i + 1})`}>
+              {i + 1}
+            </button>
+          ))
+        }
+      </div> -->
     </section>
     <footer
       class="flex md:flex-row flex-col gap-2 justify-center items-center my-10 text-[#676767]"

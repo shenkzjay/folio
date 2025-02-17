@@ -4,7 +4,7 @@
 interface Props {
   title: string;
   slug: string;
-  videolink: string;
+  videolink: string | "";
   height: string;
 }
 
@@ -22,13 +22,14 @@ const { title, videolink, slug, height } = Astro.props;
       <video
         autoplay
         aria-label={title}
+        poster="../../public/image.png"
         loop
         muted
         preload="metadata"
         playsinline
         class="object-fit h-full w-full [transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none"
       >
-        <source src={videolink} />
+        <source src={videolink ? videolink : "hello"} />
         <track src="just a video" kind="captions" />
         Your browser does not support the video tag.
       </video>
