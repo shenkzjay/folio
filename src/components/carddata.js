@@ -5,47 +5,45 @@ export const cards = [
   {
     title: "RAG AI agent chatbot",
     link: "",
-    videolink: `${AI}`,
+    videolink: "../../public/vid/aivid.webm",
     slug: "ai-agent-bot",
   },
   {
     title: "Estate management system",
     link: "",
-    videolink: `${estate}`,
+    videolink: "../../public/vid/estatennn.webm",
     slug: "estate-management",
   },
   {
     title: "Online Resume Creator",
     link: "",
-    videolink:
-      "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
+    videolink: "../../public/vid/newrsume.webm",
     slug: "online-resume-creator",
   },
   {
     title: "Telegram clicker game app",
     link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
+    videolink: "../../public/coin.webm",
     slug: "telegram-click-app",
   },
   {
     title: "Football league ranking app",
     link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/proed.mp4?updatedAt=1739371582651",
+    videolink: "../../public/proed.mp4",
     slug: "football-ranking-app",
   },
 
   {
     title: "React-Online-Code-Editor",
     link: "",
-    videolink:
-      "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
+    videolink: "../../public/neweditor.webm",
     slug: "react-online-code-editor",
   },
 
   {
     title: "E-commerce Price Checker",
     link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/newecom.webm/ik-video.mp4?updatedAt=1739371542713",
+    videolink: "../../public/newecom.webm",
     slug: "ecommerce-price-comparison",
   },
 
