@@ -5,13 +5,13 @@ export const cards = [
   {
     title: "RAG AI agent chatbot",
     link: "",
-    videolink: "../../public/vid/aivid.webm",
+    videolink: "../../vid/aivid.webm",
     slug: "ai-agent-bot",
   },
   {
     title: "Estate management system",
     link: "",
-    videolink: "../../public/vid/estatennn.webm",
+    videolink: "../../vid/estatennn.webm",
     slug: "estate-management",
   },
   {
