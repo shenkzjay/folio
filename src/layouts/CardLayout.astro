@@ -14,7 +14,6 @@ const { title, videolink, slug, height } = Astro.props;
 <a
   class="flex group flex-col h-full justify-between gap-3 mx-6 md:mx-0"
   href={`/projects/${slug}`}
-  transition:persist={slug}
   aria-label={title}
   transition:name={slug}
 >
