@@ -10,44 +10,6 @@ import Linkarrow from "../../public/svgIcon/linkarrow.astro";
 import Profile from "../../public/vid/profile.jpg";
 import AIagent from "../../public/image.png";
 import { cards } from "../components/carddata";
-
-const itemsPerPage = 6;
-let currentPage = 1;
-
-const totalPages = Math.ceil(cards.length / itemsPerPage);
-const startIndexSN = (currentPage - 1) * itemsPerPage;
-
-const indexOfLastPage = currentPage * itemsPerPage;
-const indexOfFirstPage = indexOfLastPage - itemsPerPage;
-let currentPageItems = cards.slice(indexOfFirstPage, indexOfLastPage);
-
-function paginateMe(pageNumber: number) {
-  currentPage = pageNumber;
-  const newIndexOfLastPage = currentPage * itemsPerPage;
-  const newIndexOfFirstPage = newIndexOfLastPage - itemsPerPage;
-  currentPageItems = cards.slice(newIndexOfFirstPage, newIndexOfLastPage);
-  renderItems();
-}
-
-function renderItems() {
-  const itemsContainer = document.querySelector(".items-container");
-  if (itemsContainer) {
-    itemsContainer.innerHTML = currentPageItems
-      .map(
-        (items) => `
-      <li class="" aria-label="${items.title}">
-        <CardLayout
-          title="${items.title}"
-          videolink="${items.videolink}"
-          slug="${items.slug}"
-          height="12rem"
-        />
-      </li>
-    `
-      )
-      .join("");
-  }
-}
 ---
 
 <Layout title="homepage">
@@ -408,6 +370,7 @@ function renderItems() {
     .links {
       animation-timeline: scroll();
       animation-range: 0px 150px;
+      will-change: scroll-position;
     }
 
     .headernametext {
@@ -498,8 +461,9 @@ function renderItems() {
     @keyframes displaytext {
       to {
         transform: translate(0%, -200%);
-        /* visibility: hidden;
-        opacity: 0; */
+        visibility: hidden;
+        opacity: 0;
+        display: none;
       }
     }
 

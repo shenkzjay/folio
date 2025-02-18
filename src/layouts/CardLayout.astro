@@ -23,7 +23,8 @@ const { title, videolink, slug, height } = Astro.props;
       <video
         autoplay
         aria-label={title}
-        poster="../../public/image.png"
+        poster="../../image.png"
+        preload="none"
         loop
         muted
         playsinline
