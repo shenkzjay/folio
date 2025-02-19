@@ -8,110 +8,17 @@ import AIagent from "../../../public/image.png";
 import AI from "../../public/vid/aivid.webm";
 import estate from "../../public/vid/estatennn.webm";
 // import GithubIcon from "../../../public/svgIcon/githubIcon.astro";
-
+import { cards } from "../../components/carddata";
 export async function getStaticPaths() {
-  const pages = [
-    {
-      slug: "estate-management",
-      title: "Estate/Gated community access control management app",
-      description:
-        "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc *demo - username:killasenk@gmail.com password:123*",
-      img: "../../vid/estatennn.webm",
-      tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
-      site: "https://https://estatepro-taupe.vercel.app/dashboard",
-      github: "https://github.com/shenkzjay/remixchatbot",
-    },
-    {
-      slug: "ai-agent-bot",
-      title: "RAG AI agent with remix and langgraph",
-      description: "A RAG AI agent bot created using remix js, Langchain and Langgraph.",
-      img: "../../vid/aivid.webm",
-      tags: ["ai", "remixjs", "langchain", "langgraph", "pinecone", "gemini-flash 1.5 api"],
-      site: "https://remixchatbot.vercel.app/",
-      github: "https://github.com/shenkzjay/remixchatbot",
-    },
-    {
-      slug: "online-resume-creator",
-      title: "Online Resume Creator",
-      description:
-        "An online resume editor that lets you easily select a layout, customize and download your resume as a pdf file",
-      img: "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
-      tags: [
-        "react",
-        "typescript",
-        "redux-toolkit",
-        "tailwindcss",
-        "html2pdf",
-        "react-query",
-        "git",
-      ],
-      site: "https://resume-builder-ys1u-shenkzjays-projects.vercel.app/",
-      github: "https://github.com/shenkzjay/resume-builder",
-    },
-    {
-      slug: "telegram-click-app",
-      title: "Telegram clicker game app",
-      description: "A telegram clicker game app for acquiring airdrops",
-      img: " https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
-      tags: ["crypto", "nextjs", "ton", "drizzle"],
-      site: "https://telegram-two-red.vercel.app/",
-      github: "https://github.com/shenkzjay/telegram-mini-app",
-    },
-
-    {
-      slug: "react-online-code-editor",
-      title: "React-Online-Code-Editor",
-      description:
-        "A react code editor playground with code cell blocks that provides a rough sketch whiteboard for your codes",
-      img: "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
-      tags: ["react", "typescript", "bulma.css", "redux-toolkit", "es-build", "CI/CD"],
-      site: "",
-      github: "https://github.com/shenkzjay/simple-code-editor",
-    },
-
-    {
-      slug: "ecommerce-price-comparison",
-      title: "E-commerce Price Checker",
-      description:
-        "An ecommerce price comparison checker that get the price and variety of items across some ecommerce platforms",
-      img: "https://ik.imagekit.io/tke5fzwem/newecom.webm/ik-video.mp4?updatedAt=1739371542713",
-      tags: ["nextjs", "typescript", "playwright", "web-scraping", "docker"],
-      site: "",
-      github: "https://github.com/shenkzjay/Comparison-website/tree/compweb_v1.1",
-    },
-
-    {
-      slug: "football-ranking-app",
-      title: "Football league ranking app",
-      description:
-        "A football league app to rank teams according to their performances; keeps track of player statictics and update live scores!",
-      img: "https://ik.imagekit.io/tke5fzwem/proed.mp4?updatedAt=1739371582651",
-      tags: ["nextjs", "tailwindcss", "postgress", "drizzle"],
-      site: "https://futball-eight.vercel.app/",
-      github: "https://github.com/shenkzjay/football-league-ranking-app",
-    },
-
-    {
-      slug: "css-arts",
-      title: "Css Art Illustrations",
-      description:
-        "A lynn fisher inspired project for creating cool illustrations using pure css on a single div",
-      img: " https://ik.imagekit.io/tke5fzwem/cssarts.webm/ik-video.mp4?updatedAt=1739371534205",
-      tags: ["pure css", "singledivs", "illustration"],
-      site: "https://cssillustrations.netlify.app/",
-      github: "https://github.com/shenkzjay/cssillustri",
-    },
-  ];
-
-  return pages.map(({ slug, title, description, img, tags, site, github }) => {
+  return cards.map(({ slug, title, description, videolink, tags, site, github }) => {
     return {
       params: { slug },
-      props: { title, description, img, tags, slug, site, github },
+      props: { title, description, videolink, tags, slug, site, github },
     };
   });
 }
 
-const { title, description, img, tags, slug, site, github } = Astro.props;
+const { title, description, videolink, tags, slug, site, github } = Astro.props;
 ---
 
 <Layout title={slug}>
@@ -167,7 +74,7 @@ const { title, description, img, tags, slug, site, github } = Astro.props;
             </div>
           </nav>
 
-          <CardLayout title={title} , slug={slug} videolink={img} height="27" />
+          <CardLayout title={title} , slug={slug} videolink={videolink} height="27" />
           <p class="mx-6 md:mx-0">{description}</p>
           <ul class="flex flex-row gap-4 flex-wrap mx-6 md:mx-0">
             {

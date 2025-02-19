@@ -3,56 +3,100 @@ import estate from "../../public/vid/estatennn.webm";
 
 export const cards = [
   {
-    title: "RAG AI agent chatbot",
-    link: "",
-    videolink: "../../vid/aivid.webm",
-    slug: "ai-agent-bot",
-  },
-  {
-    title: "Estate management system",
-    link: "",
-    videolink: "../../vid/estatennn.webm",
     slug: "estate-management",
+    title: "Estate/Gated community access control management app",
+    description:
+      "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc *demo - username:killasenk@gmail.com password:123*",
+    // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
+    videolink: "/vid/lowestate.webm",
+    tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
+    site: "https://https://estatepro-taupe.vercel.app/dashboard",
+    github: "https://github.com/shenkzjay/remixchatbot",
   },
   {
-    title: "Online Resume Creator",
-    link: "",
-    videolink:
-      "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
+    slug: "ai-agent-bot",
+    title: "RAG AI agent with remix and langgraph",
+    description: "A RAG AI agent bot created using remix js, Langchain and Langgraph.",
+    // videolink:
+    //   "https://drive.google.com/file/d/1qdqwdm4hJxiO5MwYm3AxgGKTRtOwJcox/view?usp=drive_link",
+    videolink: "/vid/lowai.mov",
+    tags: ["ai", "remixjs", "langchain", "langgraph", "pinecone", "gemini-flash 1.5 api"],
+    site: "https://remixchatbot.vercel.app/",
+    github: "https://github.com/shenkzjay/remixchatbot",
+  },
+  {
     slug: "online-resume-creator",
+    title: "Online Resume Creator",
+    description:
+      "An online resume editor that lets you easily select a layout, customize and download your resume as a pdf file",
+    // videolink:
+    //   "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
+    videolink: "/vid/lowresume.webm",
+    tags: ["react", "typescript", "redux-toolkit", "tailwindcss", "html2pdf", "react-query", "git"],
+    site: "https://resume-builder-ys1u-shenkzjays-projects.vercel.app/",
+    github: "https://github.com/shenkzjay/resume-builder",
   },
   {
-    title: "Telegram clicker game app",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
     slug: "telegram-click-app",
-  },
-  {
-    title: "Football league ranking app",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/proed.mp4?updatedAt=1739371582651",
-    slug: "football-ranking-app",
+    title: "Telegram clicker game app",
+    description: "A telegram clicker game app for acquiring airdrops",
+    // videolink: " https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
+    videolink: "/vid/coin.webm",
+    tags: ["crypto", "nextjs", "ton", "drizzle"],
+    site: "https://telegram-two-red.vercel.app/",
+    github: "https://github.com/shenkzjay/telegram-mini-app",
   },
 
   {
-    title: "React-Online-Code-Editor",
-    link: "",
-    videolink:
-      "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
     slug: "react-online-code-editor",
+    title: "React-Online-Code-Editor",
+    description:
+      "A react code editor playground with code cell blocks that provides a rough sketch whiteboard for your codes",
+    // videolink:
+    //   "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
+    videolink: "/vid/neweditor.webm",
+    tags: ["react", "typescript", "bulma.css", "redux-toolkit", "es-build", "CI/CD"],
+    site: "",
+    github: "https://github.com/shenkzjay/simple-code-editor",
   },
 
   {
-    title: "E-commerce Price Checker",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/newecom.webm/ik-video.mp4?updatedAt=1739371542713",
     slug: "ecommerce-price-comparison",
+    title: "E-commerce Price Checker",
+    description:
+      "An ecommerce price comparison checker that get the price and variety of items across some ecommerce platforms",
+    // videolink: "https://ik.imagekit.io/tke5fzwem/newecom.webm/ik-video.mp4?updatedAt=1739371542713",
+    videolink: "/vid/newecom.webm",
+
+    tags: ["nextjs", "typescript", "playwright", "web-scraping", "docker"],
+    site: "",
+    github: "https://github.com/shenkzjay/Comparison-website/tree/compweb_v1.1",
   },
 
   {
-    title: "Css Art Illustrations",
-    link: "",
-    videolink: "https://ik.imagekit.io/tke5fzwem/cssarts.webm/ik-video.mp4?updatedAt=1739371534205",
+    slug: "football-ranking-app",
+    title: "Football league ranking app",
+    description:
+      "A football league app to rank teams according to their performances; keeps track of player statictics and update live scores!",
+    // videolink: "https://ik.imagekit.io/tke5fzwem/proed.mp4?updatedAt=1739371582651",
+    videolink: "/vid/proed.mp4",
+
+    tags: ["nextjs", "tailwindcss", "postgress", "drizzle"],
+    site: "https://futball-eight.vercel.app/",
+    github: "https://github.com/shenkzjay/football-league-ranking-app",
+  },
+
+  {
     slug: "css-arts",
+    title: "Css Art Illustrations",
+    description:
+      "A lynn fisher inspired project for creating cool illustrations using pure css on a single div",
+    // videolink:
+    //   " https://ik.imagekit.io/tke5fzwem/cssarts.webm/ik-video.mp4?updatedAt=1739371534205",
+    videolink: "/vid/cssarts.webm",
+
+    tags: ["pure css", "singledivs", "illustration"],
+    site: "https://cssillustrations.netlify.app/",
+    github: "https://github.com/shenkzjay/cssillustri",
   },
 ];

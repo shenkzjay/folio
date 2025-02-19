@@ -9,6 +9,8 @@ interface Props {
 }
 
 const { title, videolink, slug, height } = Astro.props;
+
+console.log(videolink);
 ---
 
 <a
@@ -16,20 +18,22 @@ const { title, videolink, slug, height } = Astro.props;
   href={`/projects/${slug}`}
   aria-label={title}
   transition:name={slug}
+  transition:persist={slug}
 >
   <div class=`h-${height} w-full card-halftone p-1 `>
     <div class="outline outline-gray-300 outline-offset-4">
       <video
         autoplay
         aria-label={title}
-        poster="../../image.png"
         preload="none"
         loop
         muted
         playsinline
-        class="object-fit h-full w-full [transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none"
+        class="object-fit h-full w-full [transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none lazy-load"
+        data-src={videolink}
       >
-        <source src={videolink ? videolink : "hello"} />
+        <source src={videolink ? videolink : ""} type="video/mp4" />
+        <source src={videolink ? videolink : ""} type="video/webm" />
         <track src="just a video" kind="captions" />
         Your browser does not support the video tag.
       </video>
@@ -93,3 +97,29 @@ const { title, videolink, slug, height } = Astro.props;
     z-index: -1;
   }
 </style>
+
+<script is:inline>
+  // // Select all videos with a data-src attribute
+  // const videos = document.querySelectorAll("video[data-src]");
+  // const config = {
+  //   rootMargin: "0px 0px 200px 0px", // start loading a bit before they come into view
+  //   threshold: 0.25,
+  // };
+
+  // const observer = new IntersectionObserver((entries, observer) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       const video = entry.target;
+  //       const src = video.getAttribute("data-src");
+  //       if (src) {
+  //         video.querySelector("source").src = src;
+  //         video.load();
+  //         video.removeAttribute("data-src");
+  //       }
+  //       observer.unobserve(video);
+  //     }
+  //   });
+  // }, config);
+
+  // videos.forEach((video) => observer.observe(video));
+</script>

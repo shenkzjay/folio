@@ -91,7 +91,7 @@ import { cards } from "../components/carddata";
       </div>
 
       <div class="text-center flex justify-center displaytext overflow-hidden">
-        <p class="w-2/3 text-[#676767]">I create clean and functional application</p>
+        <p class="w-2/3 text-base">I create clean and functional application</p>
       </div>
     </header>
 
@@ -331,9 +331,6 @@ import { cards } from "../components/carddata";
       top: 0;
       animation: heightdown linear both;
       z-index: 1;
-      /* background: #f7f7f7; */
-
-      /* border-bottom: none; */
     }
 
     .links {
@@ -370,7 +367,6 @@ import { cards } from "../components/carddata";
     .links {
       animation-timeline: scroll();
       animation-range: 0px 150px;
-      will-change: scroll-position;
     }
 
     .headernametext {
@@ -406,12 +402,6 @@ import { cards } from "../components/carddata";
       }
     }
 
-    /* @keyframes shrinkpics {
-      to {
-        display: none;
-      }
-    } */
-
     @media screen and (max-width: 800px) {
       @keyframes heightdown {
         from {
@@ -445,25 +435,17 @@ import { cards } from "../components/carddata";
           transition: transform 0.3s ease-in-out;
         }
       }
-
-      /* .profilename {
-        transform: translateY(-15%);
-      } */
     }
 
     @keyframes reducetext {
       to {
         transform: translate(0%, 0%);
-        /* margin-top: 1.5rem; */
       }
     }
 
     @keyframes displaytext {
       to {
-        transform: translate(0%, -200%);
-        visibility: hidden;
-        opacity: 0;
-        display: none;
+        transform: translate(0%, -50%);
       }
     }
 
