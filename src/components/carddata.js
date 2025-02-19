@@ -4,7 +4,7 @@ import estate from "../../public/vid/estatennn.webm";
 export const cards = [
   {
     slug: "estate-management",
-    title: "Estate/Gated community access control management app",
+    title: "Estate management app",
     description:
       "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc *demo - username:killasenk@gmail.com password:123*",
     // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
@@ -15,7 +15,7 @@ export const cards = [
   },
   {
     slug: "ai-agent-bot",
-    title: "RAG AI agent with remix and langgraph",
+    title: "RAG AI agent with langgraph",
     description: "A RAG AI agent bot created using remix js, Langchain and Langgraph.",
     // videolink:
     //   "https://drive.google.com/file/d/1qdqwdm4hJxiO5MwYm3AxgGKTRtOwJcox/view?usp=drive_link",
@@ -49,7 +49,7 @@ export const cards = [
 
   {
     slug: "react-online-code-editor",
-    title: "React-Online-Code-Editor",
+    title: "React Online Code Editor",
     description:
       "A react code editor playground with code cell blocks that provides a rough sketch whiteboard for your codes",
     // videolink:

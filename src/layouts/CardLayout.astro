@@ -18,7 +18,6 @@ console.log(videolink);
   href={`/projects/${slug}`}
   aria-label={title}
   transition:name={slug}
-  transition:persist={slug}
 >
   <div class=`h-${height} w-full card-halftone p-1 `>
     <div class="outline outline-gray-300 outline-offset-4">
@@ -31,6 +30,7 @@ console.log(videolink);
         playsinline
         class="object-fit h-full w-full [transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none lazy-load"
         data-src={videolink}
+        transition:persist={slug}
       >
         <source src={videolink ? videolink : ""} type="video/mp4" />
         <source src={videolink ? videolink : ""} type="video/webm" />
