@@ -10,15 +10,15 @@ import estate from "../../public/vid/estatennn.webm";
 // import GithubIcon from "../../../public/svgIcon/githubIcon.astro";
 import { cards } from "../../components/carddata";
 export async function getStaticPaths() {
-  return cards.map(({ slug, title, description, videolink, tags, site, github }) => {
+  return cards.map(({ slug, title, description, videolink, tags, site, github, imageurl }) => {
     return {
       params: { slug },
-      props: { title, description, videolink, tags, slug, site, github },
+      props: { title, description, videolink, tags, slug, site, github, imageurl },
     };
   });
 }
 
-const { title, description, videolink, tags, slug, site, github } = Astro.props;
+const { title, description, videolink, tags, slug, site, github, imageurl } = Astro.props;
 ---
 
 <Layout title={slug}>
@@ -74,7 +74,14 @@ const { title, description, videolink, tags, slug, site, github } = Astro.props;
             </div>
           </nav>
 
-          <CardLayout title={title} , slug={slug} videolink={videolink} height="27" />
+          <CardLayout
+            title={title}
+            ,
+            slug={slug}
+            videolink={videolink}
+            height="27"
+            imageurl={imageurl}
+          />
           <p class="mx-6 md:mx-0">{description}</p>
           <ul class="flex flex-row gap-4 flex-wrap mx-6 md:mx-0">
             {
@@ -86,6 +93,14 @@ const { title, description, videolink, tags, slug, site, github } = Astro.props;
               ))
             }
           </ul>
+          {
+            imageurl && (
+              <div>
+                <p>Designed by</p>
+                <p>Oluremi David</p>
+              </div>
+            )
+          }
         </div>
       </main>
     </body>
@@ -121,7 +136,8 @@ const { title, description, videolink, tags, slug, site, github } = Astro.props;
     top: 0;
     left: 0;
     background:
-      radial-gradient(ellipse, rgba(255, 255, 255, 1) 49%, transparent 50%) 5% 5%/ 1.5rem 0.4rem no-repeat,
+      radial-gradient(ellipse, rgba(255, 255, 255, 1) 49%, transparent 50%) 5% 5%/ 1.5rem 0.4rem
+        no-repeat,
       linear-gradient(#c9c7c7, #c9c7c7) 50% 0 / 100% 100% no-repeat;
     width: 90%;
     height: 80%;
@@ -173,7 +189,8 @@ const { title, description, videolink, tags, slug, site, github } = Astro.props;
     left: 0.4rem;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, black 0.03rem, transparent 0%),
+    background:
+      radial-gradient(circle, black 0.03rem, transparent 0%),
       radial-gradient(circle, black 0.02rem, transparent 0%);
     background-size: 0.15rem 0.15rem;
     background-position:

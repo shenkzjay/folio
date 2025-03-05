@@ -91,7 +91,7 @@ import { cards } from "../components/carddata";
       </div>
 
       <div class="text-center flex justify-center displaytext overflow-hidden">
-        <p class="w-2/3 text-base">I create clean and functional application</p>
+        <p class="w-2/3 text-base">I build clean and functional application</p>
       </div>
     </header>
 
@@ -106,6 +106,7 @@ import { cards } from "../components/carddata";
               <CardLayout
                 title={items.title}
                 videolink={items.videolink}
+                imageurl={items.imageurl}
                 slug={`${items.slug}`}
                 height="12rem"
               />
@@ -531,7 +532,8 @@ import { cards } from "../components/carddata";
     left: 0.35rem;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, #1a1a1a 0.02rem, transparent 0%),
+    background:
+      radial-gradient(circle, #1a1a1a 0.02rem, transparent 0%),
       radial-gradient(circle, #c4c4c4 0.02rem, transparent 0%);
     background-size: 0.1rem 0.15rem;
     background-position:

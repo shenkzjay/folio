@@ -1,5 +1,6 @@
 import AI from "../../public/vid/aivid.webm";
 import estate from "../../public/vid/estatennn.webm";
+import farm from "../../public/farmfresh.png";
 
 export const cards = [
   {
@@ -25,6 +26,17 @@ export const cards = [
     github: "https://github.com/shenkzjay/remixchatbot",
   },
   {
+    slug: "farm-fresh-website",
+    title: "Sunset Harvest Farmsite",
+    description: "A farm website template to plan for visits and showcase farmers' products",
+    // videolink:
+    //   "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
+    imageurl: "/farmfresh.png",
+    tags: ["scroll-driven-animation", "astro js", "tailwind css"],
+    site: "https://landingpage-delta-ten.vercel.app/",
+    github: "https://github.com/shenkzjay/landing-pages",
+  },
+  {
     slug: "online-resume-creator",
     title: "Online Resume Creator",
     description:
@@ -36,6 +48,7 @@ export const cards = [
     site: "https://resume-builder-ys1u-shenkzjays-projects.vercel.app/",
     github: "https://github.com/shenkzjay/resume-builder",
   },
+
   {
     slug: "telegram-click-app",
     title: "Telegram clicker game app",
@@ -45,19 +58,6 @@ export const cards = [
     tags: ["crypto", "nextjs", "ton", "drizzle"],
     site: "https://telegram-two-red.vercel.app/",
     github: "https://github.com/shenkzjay/telegram-mini-app",
-  },
-
-  {
-    slug: "react-online-code-editor",
-    title: "React Online Code Editor",
-    description:
-      "A react code editor playground with code cell blocks that provides a rough sketch whiteboard for your codes",
-    // videolink:
-    //   "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
-    videolink: "/vid/neweditor.webm",
-    tags: ["react", "typescript", "bulma.css", "redux-toolkit", "es-build", "CI/CD"],
-    site: "",
-    github: "https://github.com/shenkzjay/simple-code-editor",
   },
 
   {
@@ -100,3 +100,16 @@ export const cards = [
     github: "https://github.com/shenkzjay/cssillustri",
   },
 ];
+
+// {
+//   slug: "react-online-code-editor",
+//   title: "React Online Code Editor",
+//   description:
+//     "A react code editor playground with code cell blocks that provides a rough sketch whiteboard for your codes",
+//   // videolink:
+//   //   "https://ik.imagekit.io/tke5fzwem/neweditor.webm/ik-video.mp4?updatedAt=1739371534730",
+//   videolink: "/vid/neweditor.webm",
+//   tags: ["react", "typescript", "bulma.css", "redux-toolkit", "es-build", "CI/CD"],
+//   site: "",
+//   github: "https://github.com/shenkzjay/simple-code-editor",
+// },

@@ -1,14 +1,17 @@
 ---
+import { Image } from "astro:assets";
+
 // import Linkarrow from "../../public/svgIcon/linkarrow.astro";
 
 interface Props {
   title: string;
   slug: string;
-  videolink: string | "";
+  videolink?: string;
+  imageurl?: string;
   height: string;
 }
 
-const { title, videolink, slug, height } = Astro.props;
+const { title, videolink, slug, height, imageurl } = Astro.props;
 
 console.log(videolink);
 ---
@@ -20,24 +23,32 @@ console.log(videolink);
   transition:name={slug}
 >
   <div class=`h-${height} w-full card-halftone p-1 `>
-    <div class="outline outline-gray-300 outline-offset-4">
-      <video
-        autoplay
-        aria-label={title}
-        preload="none"
-        loop
-        muted
-        playsinline
-        class="object-fit h-full w-full [transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none lazy-load"
-        data-src={videolink}
-        transition:persist={slug}
-      >
-        <source src={videolink ? videolink : ""} type="video/mp4" />
-        <source src={videolink ? videolink : ""} type="video/webm" />
-        <track src="just a video" kind="captions" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    {
+      videolink ? (
+        <div class="outline outline-gray-300 outline-offset-4">
+          <video
+            autoplay
+            aria-label={title}
+            preload="none"
+            loop
+            muted
+            playsinline
+            class="object-fit h-full w-full [transform:_scale(1)] [transition:_transform_300ms_ease-in-out] [transform-origin:40%_50%] group-focus:outline-none lazy-load"
+            data-src={videolink}
+            transition:persist={slug}
+          >
+            <source src={videolink ? videolink : ""} type="video/mp4" />
+            <source src={videolink ? videolink : ""} type="video/webm" />
+            <track src="just a video" kind="captions" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      ) : (
+        <div class="outline outline-gray-300 outline-offset-4">
+          <img src={imageurl ? imageurl : ""} height={100} width={200} alt={title} class="w-full" />
+        </div>
+      )
+    }
   </div>
   <div class="relative flex flex-row items-center justify-between">
     <h3 class="text-black font-bold z-10" aria-label={title}>{title}</h3>
@@ -88,7 +99,8 @@ console.log(videolink);
     left: 0.4rem;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, #777777 0.03rem, transparent 0%),
+    background:
+      radial-gradient(circle, #777777 0.03rem, transparent 0%),
       radial-gradient(circle, #c4c4c4 0.02rem, transparent 0%);
     background-size: 0.15rem 0.15rem;
     background-position:
