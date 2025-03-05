@@ -7,7 +7,7 @@ export const cards = [
     slug: "estate-management",
     title: "Estate management app",
     description:
-      "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc *demo - username:killasenk@gmail.com password:123*",
+      "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc. Send an email for demo username and password",
     // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
     videolink: "/vid/lowestate.webm",
     tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
