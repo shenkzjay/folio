@@ -11,7 +11,7 @@ export const cards = [
     // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
     videolink: "/vid/lowestate.webm",
     tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
-    site: "https://https://estatepro-taupe.vercel.app/dashboard",
+    site: "https://estatepro-taupe.vercel.app/dashboard",
     github: "https://github.com/shenkzjay/remixchatbot",
   },
   {
