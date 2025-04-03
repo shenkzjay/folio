@@ -11,7 +11,7 @@ export const cards = [
     // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
     videolink: "/vid/lowestate.webm",
     tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
-    site: "https://estatepro-taupe.vercel.app/dashboard",
+    site: "https://estate.seunolajide.name.ng",
     github: "https://github.com/shenkzjay/remixchatbot",
   },
   {
@@ -22,7 +22,7 @@ export const cards = [
     //   "https://drive.google.com/file/d/1qdqwdm4hJxiO5MwYm3AxgGKTRtOwJcox/view?usp=drive_link",
     videolink: "/vid/lowai.mov",
     tags: ["ai", "remixjs", "langchain", "langgraph", "pinecone", "gemini-flash 1.5 api"],
-    site: "https://remixchatbot.vercel.app/",
+    site: "https:aichat.seunolajide.name.ng",
     github: "https://github.com/shenkzjay/remixchatbot",
   },
   {
@@ -33,7 +33,7 @@ export const cards = [
     //   "https://ik.imagekit.io/tke5fzwem/newrsume.webm/ik-video.mp4?updatedAt=1739371539134",
     imageurl: "/farmfresh.png",
     tags: ["scroll-driven-animation", "astro js", "tailwind css"],
-    site: "https://landingpage-delta-ten.vercel.app/",
+    site: "https://farmsite.seunolajide.name.ng",
     github: "https://github.com/shenkzjay/landing-pages",
   },
   {
@@ -56,7 +56,7 @@ export const cards = [
     // videolink: " https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
     videolink: "/vid/coin.webm",
     tags: ["crypto", "nextjs", "ton", "drizzle"],
-    site: "https://telegram-two-red.vercel.app/",
+    site: "https://telebot.seunolajide.name.ng",
     github: "https://github.com/shenkzjay/telegram-mini-app",
   },
 
@@ -82,7 +82,7 @@ export const cards = [
     videolink: "/vid/proed.mp4",
 
     tags: ["nextjs", "tailwindcss", "postgress", "drizzle"],
-    site: "https://futball-eight.vercel.app/",
+    site: "https://football.seunolajide.name.ng",
     github: "https://github.com/shenkzjay/football-league-ranking-app",
   },
 
