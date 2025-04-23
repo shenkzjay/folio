@@ -4,17 +4,6 @@ import farm from "../../public/farmfresh.png";
 
 export const cards = [
   {
-    slug: "estate-management",
-    title: "Estate management app",
-    description:
-      "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc. Send an email for demo username and password",
-    // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
-    videolink: "/vid/lowestate.webm",
-    tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
-    site: "https://estate.seunolajide.name.ng",
-    github: "https://github.com/shenkzjay/remixchatbot",
-  },
-  {
     slug: "ai-agent-bot",
     title: "RAG AI agent with langgraph",
     description: "A RAG AI agent bot created using remix js, Langchain and Langgraph.",
@@ -24,6 +13,17 @@ export const cards = [
     tags: ["ai", "remixjs", "langchain", "langgraph", "pinecone", "gemini-flash 1.5 api"],
     site: "https:aichat.seunolajide.name.ng",
     github: "https://github.com/shenkzjay/remixchatbot",
+  },
+  {
+    slug: "estate-management",
+    title: "Estate management app",
+    description:
+      "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc. Send an email for demo username and password",
+    // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
+    videolink: "/vid/lowestate.webm",
+    tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
+    site: "https://estate.seunolajide.name.ng",
+    // github: "https://github.com/shenkzjay/remixchatbot",
   },
   {
     slug: "farm-fresh-website",
@@ -37,6 +37,16 @@ export const cards = [
     github: "https://github.com/shenkzjay/landing-pages",
   },
   {
+    slug: "telegram-click-app",
+    title: "Telegram TON Crypto app",
+    description: "A telegram TON crypto based app for acquiring airdrops",
+    // videolink: " https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
+    videolink: "/vid/coin.webm",
+    tags: ["crypto", "nextjs", "ton", "drizzle"],
+    site: "https://telebot.seunolajide.name.ng",
+    github: "https://github.com/shenkzjay/telegram-mini-app",
+  },
+  {
     slug: "online-resume-creator",
     title: "Online Resume Creator",
     description:
@@ -47,17 +57,6 @@ export const cards = [
     tags: ["react", "typescript", "redux-toolkit", "tailwindcss", "html2pdf", "react-query", "git"],
     site: "https://resume-builder-ys1u-shenkzjays-projects.vercel.app/",
     github: "https://github.com/shenkzjay/resume-builder",
-  },
-
-  {
-    slug: "telegram-click-app",
-    title: "Telegram clicker game app",
-    description: "A telegram clicker game app for acquiring airdrops",
-    // videolink: " https://ik.imagekit.io/tke5fzwem/coin.webm/ik-video.mp4?updatedAt=1739371533953",
-    videolink: "/vid/coin.webm",
-    tags: ["crypto", "nextjs", "ton", "drizzle"],
-    site: "https://telebot.seunolajide.name.ng",
-    github: "https://github.com/shenkzjay/telegram-mini-app",
   },
 
   {
