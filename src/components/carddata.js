@@ -4,24 +4,37 @@ import farm from "../../public/farmfresh.png";
 
 export const cards = [
   {
+    slug: "estate-management",
+    title: "Estate management app",
+    description:
+      "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc. For DEMO - USERNAME:shegesjay@gmail.com PASSWORD:123",
+    // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
+    videolink: "/vid/lowestate.webm",
+    tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
+    site: "https://estate.seunolajide.name.ng",
+    // github: "https://github.com/shenkzjay/remixchatbot",
+  },
+  {
     slug: "ai-agent-bot",
-    title: "RAG AI agent with langgraph",
-    description: "A RAG AI agent bot created using remix js, Langchain and Langgraph.",
+    title: "RAG AI chat bot",
+    description: "A RAG AI chat application created using remix js, Langchain and Langgraph.",
     // videolink:
     //   "https://drive.google.com/file/d/1qdqwdm4hJxiO5MwYm3AxgGKTRtOwJcox/view?usp=drive_link",
-    videolink: "/vid/lowai.mov",
+    imageurl: "/image.png",
     tags: ["ai", "remixjs", "langchain", "langgraph", "pinecone", "gemini-flash 1.5 api"],
     site: "https:aichat.seunolajide.name.ng",
     github: "https://github.com/shenkzjay/remixchatbot",
   },
   {
-    slug: "estate-management",
-    title: "Estate management app",
+    slug: "ecom-art-gallery",
+    title: "Ecommerce art gallery",
     description:
-      "An application that helps manage resident activities in gated communities such as access code verification, generating visitors access codes, opening maintenance faults reports, getting estate update notification etc. Send an email for demo username and password",
+      "An ecommerce art gallery platform where artist and buyers can sell and buy creative artworks respectively",
+
     // videolink: "https://ik.imagekit.io/tke5fzwem/estate.mp4?updatedAt=1739886281764",
-    videolink: "/vid/lowestate.webm",
-    tags: ["nextjs", "server components", "tailwindcss", "mongodb"],
+    // videolink: "/vid/lowestate.webm",
+    imageurl: "/ecom-art.png",
+    tags: ["react-router-v7", "RBAC", "tailwindcss", "mongodb"],
     site: "https://estate.seunolajide.name.ng",
     // github: "https://github.com/shenkzjay/remixchatbot",
   },

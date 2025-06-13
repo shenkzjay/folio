@@ -45,7 +45,13 @@ console.log(videolink);
         </div>
       ) : (
         <div class="outline outline-gray-300 outline-offset-4">
-          <img src={imageurl ? imageurl : ""} height={100} width={200} alt={title} class="w-full" />
+          <img
+            src={imageurl ? imageurl : ""}
+            height={100}
+            width={200}
+            alt={title}
+            class="w-full min-h-full"
+          />
         </div>
       )
     }

@@ -21,7 +21,6 @@ import { cards } from "../components/carddata";
       <div
         class="flex md:flex-row items-center justify-between md:my-6 mt-2 gap-0 headertop mx-4 md:mx-0"
       >
-        <!-- <div class="w-20 h-20 border rounded-full bg-gray-400"></div> -->
         <div class="flex flex-row items-center justify-center md:gap-4 gap-4 headername">
           <div class="flex">
             <span class="w-16 h-16 p-1 bg-white profilepics-halftone propics">
@@ -390,6 +389,12 @@ import { cards } from "../components/carddata";
     }
 
     @keyframes heightdown {
+      /* the change in height is causing the browser to recalculate the
+      geometric position and styles of the element, which will trigger a layout
+      and this may affect performance. We can make use of transform property here
+      to prevent layout from getting triggered
+      */
+
       from {
         height: 13rem;
         font-size: 1em;
@@ -404,6 +409,11 @@ import { cards } from "../components/carddata";
     }
 
     @media screen and (max-width: 800px) {
+      /* the change in height is causing the browser to recalculate the
+      geometric position and styles of the element, which will trigger a layout
+      and this may affect performance. We can make use of transform property here
+      to prevent layout from getting triggered
+      */
       @keyframes heightdown {
         from {
           height: 14rem;
