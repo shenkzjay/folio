@@ -32,6 +32,208 @@ export interface Article {
 export const articles: Article[] = [
 
   {
+    slug: "automating-isp-operations-with-n8n",
+    title: "Automating ISP Operations with n8n",
+    subtitle: "How I turned repetitive engineer appointment processing into an automated customer notification workflow.",
+    excerpt: "How I automated repetitive engineer appointment processing with an n8n workflow that filters incoming emails, extracts appointment details, and notifies customers.",
+    date: "September 2026",
+    readTime: "4 min read",
+    category: "Business Process Automation",
+    tags: ["n8n", "Automation", "Operations", "ClickSend API"],
+    sections: [
+      {
+        title: "The Problem",
+        content: (
+          <div className="space-y-4">
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              At EarthBroadband, Openreach sent engineer appointment updates to a shared mailbox alongside other operational and promotional emails.
+            </p>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              Important appointment information could become buried in the mailbox, while processing each appointment manually required someone to:
+            </p>
+            <ul className="flex flex-col gap-2 list-disc ml-4 text-body text-light-text-secondary dark:text-dark-text-secondary">
+              <li>Find the relevant email</li>
+              <li>Extract the customer and appointment details</li>
+              <li>Notify the customer</li>
+              <li>Record the activity</li>
+            </ul>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              The challenge was to reduce this repetitive operational work while keeping the existing communication and CRM processes intact.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "The Solution",
+        content: (
+          <>
+            <div className="space-y-4">
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                I chose n8n for this workflow because it allowed for rapid iteration, visual debugging, and easy maintenance without the overhead of deploying and hosting a separate custom microservice.
+              </p>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                I designed and built an n8n workflow that treated relevant Openreach emails as the starting point for an automated customer-notification process.
+              </p>
+            </div>
+
+            <div className="space-y-4 mt-6">
+              <h4 className="text-sm sm:text-base md:text-h4 font-bold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-6">1. Identify Relevant Emails</h4>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                The workflow monitored incoming emails and filtered them using information from the subject and message content.
+              </p>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                Only messages matching the expected appointment criteria continued through the workflow.
+              </p>
+              <div className="bg-light-surface dark:bg-dark-surface p-4 flex flex-col justify-center rounded-card border border-light-border dark:border-dark-border font-mono text-xs sm:text-sm text-light-text-primary dark:text-dark-text-primary overflow-x-auto my-3">
+                <p>Incoming Email</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+                <p>Relevant Appointment?</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;↙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↘</p>
+                <p>Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&darr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+                <p>Process&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ignore</p>
+              </div>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                This prevented unrelated messages from entering the notification workflow.
+              </p>
+            </div>
+
+            <div className="space-y-4 mt-6">
+              <h4 className="text-sm sm:text-base md:text-h4 font-bold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-6">2. Extract Appointment Details</h4>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                Once an appointment email was identified, the workflow parsed the email body to extract the customer name, address, and appointment date.
+              </p>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                This transformed the unstructured text into structured data, ensuring the downstream API calls received clean, predictable payloads.
+              </p>
+            </div>
+
+            <div className="space-y-4 mt-6">
+              <h4 className="text-sm sm:text-base md:text-h4 font-bold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-6">3. Notify the Customer</h4>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                The appointment information was inserted into predefined customer communication templates.
+              </p>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                The workflow then sent notifications through:
+              </p>
+              <ul className="flex flex-col gap-2 list-disc ml-4 text-body text-light-text-secondary dark:text-dark-text-secondary">
+                <li>Email</li>
+                <li>SMS via ClickSend API</li>
+              </ul>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                This meant customers could receive appointment information without an operations team member manually composing each notification.
+              </p>
+            </div>
+
+            <div className="space-y-4 mt-6">
+              <h4 className="text-sm sm:text-base md:text-h4 font-bold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-6">4. Record the Activity</h4>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                I initially used Google Sheets as a lightweight record of processed activity.
+              </p>
+              <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+                As the workflow evolved, it was connected to the company's internal CRM, allowing the automation to become part of the existing operational process rather than operating separately from it.
+              </p>
+            </div>
+          </>
+        ),
+      },
+      {
+        title: "The Result",
+        content: (
+          <div className="space-y-4">
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              The workflow automated the repetitive process between receiving an Openreach appointment update and notifying the customer.
+            </p>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              The process became:
+            </p>
+            <div className="bg-light-surface dark:bg-dark-surface p-4 flex flex-col justify-center rounded-card border border-light-border dark:border-dark-border font-mono text-xs sm:text-sm text-light-text-primary dark:text-dark-text-primary overflow-x-auto my-3">
+              <p>Openreach</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+              <p>Mailbox</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+              <p>n8n</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+              <p>Filter</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+              <p>Extract Details</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+              <p>Email + SMS</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&darr;</p>
+              <p>CRM</p>
+            </div>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              Instead of manually searching for appointment emails and notifying customers, the system processed the information automatically.
+            </p>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              This reduced manual operational work and helped ensure customers received appointment information without requiring someone to manually process every relevant email.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "What I Learned",
+        content: (
+          <div className="space-y-4">
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              The biggest lesson wasn't about n8n.
+            </p>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              It was about recognizing repetitive operational work as an engineering problem.
+            </p>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              The project reinforced the value of transforming external, unstructured information into structured data and passing it between systems through APIs.
+            </p>
+            <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+              That same pattern appears throughout product engineering:
+            </p>
+            <div className="bg-light-surface dark:bg-dark-surface p-4 rounded-card border border-light-border dark:border-dark-border font-mono text-xs sm:text-sm text-light-text-primary dark:text-dark-text-primary overflow-x-auto my-3">
+              <p>External event &rarr; Transform data &rarr; API integration &rarr; Business outcome</p>
+            </div>
+          </div>
+        ),
+      },
+    ],
+    decisionsTable: {
+      title: "Engineering Trade-offs",
+      description:
+        "The objective wasn't to automate the entire operational system. It was to remove a specific repetitive process while keeping the workflow understandable and maintainable.",
+      headers: ["Decision", "Why we chose it", "Trade-off"],
+      rows: [
+        {
+          decision: "Filter emails before processing",
+          rationale: "Prevents unrelated messages from triggering the workflow",
+          tradeoff: "Depends on consistent email patterns",
+        },
+        {
+          decision: "Structured appointment data",
+          rationale: "Makes downstream notifications predictable",
+          tradeoff: "Changes to the email format may require workflow updates",
+        },
+        {
+          decision: "Email + SMS",
+          rationale: "Provides multiple customer communication channels",
+          tradeoff: "Introduces external messaging dependencies",
+        },
+        {
+          decision: "CRM integration",
+          rationale: "Keeps automation connected to existing operations",
+          tradeoff: "Adds another integration to maintain",
+        },
+      ],
+    },
+    keyTakeaways: (
+      <div className="space-y-3">
+        <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+          An inbox doesn't have to be just a place where people search for information. It can become the starting point for an automated business process.
+        </p>
+        <p className="text-body text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+          Recognizing repetitive operational work as an engineering problem is the first step toward automating it.
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "resilient-billing-workflows-frontend",
     title: "Handling Async Payment State: Reducing Billing Errors by 80%",
     subtitle: "An engineering post-mortem on preventing duplicate payment attempts when frontend assumptions meet asynchronous payment processing.",
