@@ -16,7 +16,7 @@ export default function N8nAutomations() {
       <p className="text-h4 text-light-text-secondary dark:text-dark-text-secondary mb-2">
         Automation Engineering
       </p>
-      <div className="flex flex-row text-xs gap-6 mb-12 items-center">
+      <div className="flex flex-row text-small gap-6 mb-12 items-center">
         <p className="text-slate-400 dark:text-slate-500">Email</p>
         <span className="text-slate-400 dark:text-slate-500">→</span>
         <p className="text-slate-400 dark:text-slate-500">CRM</p>

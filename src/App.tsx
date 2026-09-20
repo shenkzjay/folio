@@ -39,48 +39,48 @@ function Home() {
     <>
       <div className="mt-8 sm:mt-12 md:mt-section-gap">
         <div className="flex flex-col justify-center w-full gap-2 sm:gap-3">
-          <h1 className="text-2xl sm:text-3xl md:text-h2 font-bold text-light-text-primary dark:text-dark-text-primary leading-tight">
+          <h1 className="text-h2 font-bold text-light-text-primary dark:text-dark-text-primary leading-tight">
             Engineering products that people depend on.
           </h1>
-          <p className="text-sm sm:text-base md:text-body text-light-text-secondary dark:text-dark-text-secondary max-w-3xl leading-relaxed">
+          <p className="text-body text-light-text-secondary dark:text-dark-text-secondary max-w-3xl leading-relaxed">
             As a Frontend Engineer with over the past 7 years, I've built scalable SaaS platforms, immersive 3D learning experiences, and deployment infrastructure for startups and public institutions, serving thousands of users.
           </p>
         </div>
 
         <div className="mt-6 sm:mt-component-gap grid grid-cols-2 sm:grid-cols-4 border-y border-light-border dark:border-dark-border divide-y sm:divide-y-0 divide-light-border dark:divide-dark-border sm:divide-x">
           <div className="flex flex-col justify-between py-3.5 sm:py-4 px-2.5 sm:px-4">
-            <h3 className="text-xl sm:text-2xl md:text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">7+</h3>
-            <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Years Experience</p>
+            <h3 className="text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">7+</h3>
+            <p className="text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Years Experience</p>
           </div>
           <div className="flex flex-col justify-between py-3.5 sm:py-4 px-2.5 sm:px-4">
-            <h3 className="text-xl sm:text-2xl md:text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">4,000+</h3>
-            <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Customers Supported</p>
+            <h3 className="text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">4,000+</h3>
+            <p className="text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Customers Supported</p>
           </div>
           <div className="flex flex-col justify-between py-3.5 sm:py-4 px-2.5 sm:px-4">
-            <h3 className="text-xl sm:text-2xl md:text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">65</h3>
-            <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Colleges Deployed</p>
+            <h3 className="text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">65</h3>
+            <p className="text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Colleges Deployed</p>
           </div>
           <div className="flex flex-col justify-between py-3.5 sm:py-4 px-2.5 sm:px-4">
-            <h3 className="text-xl sm:text-2xl md:text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">80%</h3>
-            <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Reduction in billing errors</p>
+            <h3 className="text-h3 font-bold text-light-text-primary dark:text-dark-text-primary">80%</h3>
+            <p className="text-small text-light-text-secondary dark:text-dark-text-secondary mt-1">Reduction in billing errors</p>
           </div>
         </div>
       </div>
 
       <main className="mt-10 sm:mt-section-gap flex flex-col gap-10 sm:section-gap pb-16 sm:pb-16">
         <section>
-          <h2 className="text-xl sm:text-2xl md:text-h2 font-semibold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-component-gap">Featured work</h2>
+          <h2 className="text-h3 font-semibold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-component-gap">Featured work</h2>
           <div className="flex flex-col border-y border-light-border dark:border-dark-border divide-y divide-light-border dark:divide-dark-border">
 
             <Link to="/case-study/edon-sim-pro" className="group flex flex-col sm:flex-row justify-between gap-3 sm:gap-8 lg:gap-16 py-6 sm:py-8 cursor-pointer transition-default sm:items-center">
               <div className="flex flex-col">
-                <h3 className="text-base sm:text-lg md:text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">EDON SIM-PRO</h3>
+                <h3 className="text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">EDON SIM-PRO</h3>
                 <div className="flex flex-col">
-                  <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary">Interactive 3D simulation-based learning platform deployed across 65 Federal Colleges.</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Interactive 3D simulation-based learning platform deployed across 65 Federal Colleges.</p>
                 </div>
               </div>
               <div className="self-start sm:self-center shrink-0 pt-1 sm:pt-0">
-                <div className="flex items-center gap-1 text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
+                <div className="flex items-center gap-1 text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
                   <span className="relative">
                     View Case Study
                     <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-accent transition-all transition-default group-hover:w-full"></span>
@@ -92,13 +92,13 @@ function Home() {
 
             <Link to="/case-study/earth-broadband" className="group flex flex-col sm:flex-row justify-between gap-3 sm:gap-8 lg:gap-16 py-6 sm:py-8 cursor-pointer transition-default sm:items-center">
               <div className="flex flex-col">
-                <h3 className="text-base sm:text-lg md:text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">EARTH BROADBAND</h3>
+                <h3 className="text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">EARTH BROADBAND</h3>
                 <div className="flex flex-col">
-                  <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary">Reduced billing errors by 80% while supporting 4,000+ customers.</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Reduced billing errors by 80% while supporting 4,000+ customers.</p>
                 </div>
               </div>
               <div className="self-start sm:self-center shrink-0 pt-1 sm:pt-0">
-                <div className="flex items-center gap-1 text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
+                <div className="flex items-center gap-1 text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
                   <span className="relative">
                     View Case Study
                     <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-accent transition-all transition-default group-hover:w-full"></span>
@@ -110,13 +110,13 @@ function Home() {
 
             <Link to="/case-study/infrastructure-migration" className="group flex flex-col sm:flex-row justify-between gap-3 sm:gap-8 lg:gap-16 py-6 sm:py-8 cursor-pointer transition-default sm:items-center">
               <div className="flex flex-col">
-                <h3 className="text-base sm:text-lg md:text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">INFRASTRUCTURE MIGRATION</h3>
+                <h3 className="text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">INFRASTRUCTURE MIGRATION</h3>
                 <div className="flex flex-col">
-                  <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary">Consolidating 65 isolated cloud instances into a centralized VPS architecture to reducing operational costs and simplifying deployment.</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Consolidating 65 isolated cloud instances into a centralized VPS architecture to reducing operational costs and simplifying deployment.</p>
                 </div>
               </div>
               <div className="self-start sm:self-center shrink-0 pt-1 sm:pt-0">
-                <div className="flex items-center gap-1 text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
+                <div className="flex items-center gap-1 text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
                   <span className="relative">
                     View Case Study
                     <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-accent transition-all transition-default group-hover:w-full"></span>
@@ -130,18 +130,18 @@ function Home() {
         </section>
 
         {/* <section>
-          <h2 className="text-xl sm:text-2xl md:text-h2 font-semibold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-component-gap">Systems & Infrastructure</h2>
+          <h2 className="text-h3 font-semibold text-light-text-primary dark:text-dark-text-primary mb-4 sm:mb-component-gap">Systems & Infrastructure</h2>
           <div className="flex flex-col border-y border-light-border dark:border-dark-border divide-y divide-light-border dark:divide-dark-border">
 
             <Link to="/case-study/infrastructure-migration" className="group flex flex-col sm:flex-row justify-between gap-3 sm:gap-8 lg:gap-16 py-6 sm:py-8 cursor-pointer transition-default sm:items-center">
               <div className="flex flex-col">
-                <h3 className="text-base sm:text-lg md:text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">INFRASTRUCTURE MIGRATION</h3>
+                <h3 className="text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">INFRASTRUCTURE MIGRATION</h3>
                 <div className="flex flex-col">
-                  <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary">Consolidating 65 isolated cloud instances into a centralized VPS architecture to reducing operational costs and simplifying deployment.</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Consolidating 65 isolated cloud instances into a centralized VPS architecture to reducing operational costs and simplifying deployment.</p>
                 </div>
               </div>
               <div className="self-start sm:self-center shrink-0 pt-1 sm:pt-0">
-                <div className="flex items-center gap-1 text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
+                <div className="flex items-center gap-1 text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
                   <span className="relative">
                     View Case Study
                     <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-accent transition-all transition-default group-hover:w-full"></span>
@@ -153,13 +153,13 @@ function Home() {
 
             <Link to="/case-study/n8n-automations" className="group flex flex-col sm:flex-row justify-between gap-3 sm:gap-8 lg:gap-16 py-6 sm:py-8 cursor-pointer transition-default sm:items-center">
               <div className="flex flex-col">
-                <h3 className="text-base sm:text-lg md:text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">N8N AUTOMATIONS</h3>
+                <h3 className="text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1 group-hover:text-accent transition-colors">N8N AUTOMATIONS</h3>
                 <div className="flex flex-col">
-                  <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary">Orchestrating automated workflows to generate and qualify high-conversion leads, reducing manual data entry.</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Orchestrating automated workflows to generate and qualify high-conversion leads, reducing manual data entry.</p>
                 </div>
               </div>
               <div className="self-start sm:self-center shrink-0 pt-1 sm:pt-0">
-                <div className="flex items-center gap-1 text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
+                <div className="flex items-center gap-1 text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
                   <span className="relative">
                     View Case Study
                     <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-accent transition-all transition-default group-hover:w-full"></span>
@@ -194,10 +194,10 @@ function App() {
             <nav className="flex flex-col sm:flex-row w-full items-start sm:items-center justify-between gap-4">
               <div>
                 <Link to="/" className="hover:text-accent transition-default">
-                  <h3 className="text-lg sm:text-xl font-bold tracking-tight text-light-text-primary dark:text-dark-text-primary">Olajide Seun</h3>
+                  <h3 className="text-h4 font-bold tracking-tight text-light-text-primary dark:text-dark-text-primary">Olajide Seun</h3>
                 </Link>
               </div>
-              <ul className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-small list-none">
+              <ul className="flex flex-wrap items-center gap-4 sm:gap-6 text-small list-none">
                 <li>
                   <NavLink
                     to="/writing"
@@ -245,7 +245,7 @@ function App() {
             <p className="text-light-text-secondary">Have a role or project in mind?</p>
             <p className="text-light-text-primary dark:text-dark-text-primary">Let's work together</p>
 
-            <div className="flex text-base gap-3 sm:gap-6 items-center text-light-text-secondary dark:text-dark-text-secondary">
+            <div className="flex text-body gap-3 sm:gap-6 items-center text-light-text-secondary dark:text-dark-text-secondary">
 
               <a
                 href={`mailto:senksjay@gmail.com`}
@@ -272,7 +272,7 @@ function App() {
                 LinkedIn
               </a>
             </div>
-            <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary">
+            <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">
               © 2026 Seun O.
             </p>
 

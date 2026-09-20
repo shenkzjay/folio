@@ -20,7 +20,7 @@ export default function EdonSimPro() {
       <p className="text-h4 text-light-text-secondary dark:text-dark-text-secondary mb-2">
         Interactive 3D simulation-based learning platform.
       </p>
-      <div className="flex flex-row text-xs gap-6 mb-12 items-center">
+      <div className="flex flex-row text-small gap-6 mb-12 items-center">
         <p className="text-slate-400 dark:text-slate-500">Education</p>
         <p className="text-slate-400 dark:text-slate-500">3D Learning</p>
         <p className="text-slate-400 dark:text-slate-500">65 Institutions</p>
@@ -39,7 +39,7 @@ export default function EdonSimPro() {
         </div>
         <span className="border-r border-light-border dark:border-dark-border"></span>
         <div className="flex flex-col justify-center py-4">
-          <h3>Team</h3>
+          <h3 className="text-h4 text-light-text-primary dark:text-dark-text-primary">Team</h3>
           <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">5 Engineers</p>
         </div>
       </div>
@@ -62,14 +62,14 @@ export default function EdonSimPro() {
         <h2 className="text-h3 text-light-text-primary dark:text-dark-text-primary">Technology Highlights</h2>
 
         <div className="mt-6 flex flex-col gap-1">
-          <h3 className="text-sm text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">Frontend</h3>
+          <h3 className="text-small text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">Frontend</h3>
           <div>
             <div className="flex gap-4">
-              <p className="text-sm text-slate-400 dark:text-secondary">React</p>
-              <span className="text-sm text-slate-400 dark:text-secondary ">-</span>
-              <p className="text-sm text-slate-400 dark:text-secondary">Typescript</p>
-              <span className="text-sm text-slate-400 dark:text-secondary ">-</span>
-              <p className="text-sm text-slate-400 dark:text-secondary">Tailwind CSS</p>
+              <p className="text-small text-slate-400 dark:text-secondary">React</p>
+              <span className="text-small text-slate-400 dark:text-secondary ">-</span>
+              <p className="text-small text-slate-400 dark:text-secondary">Typescript</p>
+              <span className="text-small text-slate-400 dark:text-secondary ">-</span>
+              <p className="text-small text-slate-400 dark:text-secondary">Tailwind CSS</p>
             </div>
           </div>
         </div>
@@ -77,38 +77,38 @@ export default function EdonSimPro() {
 
 
         <div className="mt-6 flex flex-col gap-1">
-          <h3 className="text-sm text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">3D</h3>
+          <h3 className="text-small text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">3D</h3>
           <div>
             <div className="flex gap-4">
-              <p className="text-sm text-slate-400 dark:text-secondary ">Sketchfab Viewer API</p>
+              <p className="text-small text-slate-400 dark:text-secondary ">Sketchfab Viewer API</p>
             </div>
           </div>
         </div>
 
 
         <div className="mt-6 flex flex-col gap-1">
-          <h3 className="text-sm text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">Platform</h3>
+          <h3 className="text-small text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">Platform</h3>
           <div>
             <div className="flex gap-4">
-              <p className="text-sm text-slate-400 dark:text-secondary ">REST APIs</p>
-              <span className="text-sm text-slate-400 dark:text-secondary ">-</span>
-              <p className="text-sm text-slate-400 dark:text-secondary ">Role-Based Access Control (RBAC)</p>
+              <p className="text-small text-slate-400 dark:text-secondary ">REST APIs</p>
+              <span className="text-small text-slate-400 dark:text-secondary ">-</span>
+              <p className="text-small text-slate-400 dark:text-secondary ">Role-Based Access Control (RBAC)</p>
             </div>
           </div>
         </div>
 
 
         <div className="mt-6 flex flex-col gap-1">
-          <h3 className="text-sm text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">Infrastructure</h3>
+          <h3 className="text-small text-light-text-secondary dark:text-dark-text-secondary font-medium text-light-text-primary dark:text-dark-text-primary">Infrastructure</h3>
           <div>
             <div className="flex gap-4">
-              <p className="text-sm text-slate-400 dark:text-secondary ">Docker</p>
-              <span className="text-sm text-slate-400 dark:text-secondary ">-</span>
-              <p className="text-sm text-slate-400 dark:text-secondary ">Nginx</p>
-              <span className="text-sm text-slate-400 dark:text-secondary ">-</span>
-              <p className="text-sm text-slate-400 dark:text-secondary ">Linux</p>
-              <span className="text-sm text-slate-400 dark:text-secondary ">-</span>
-              <p className="text-sm text-slate-400 dark:text-secondary ">VPS</p>
+              <p className="text-small text-slate-400 dark:text-secondary ">Docker</p>
+              <span className="text-small text-slate-400 dark:text-secondary ">-</span>
+              <p className="text-small text-slate-400 dark:text-secondary ">Nginx</p>
+              <span className="text-small text-slate-400 dark:text-secondary ">-</span>
+              <p className="text-small text-slate-400 dark:text-secondary ">Linux</p>
+              <span className="text-small text-slate-400 dark:text-secondary ">-</span>
+              <p className="text-small text-slate-400 dark:text-secondary ">VPS</p>
             </div>
           </div>
 
@@ -169,17 +169,17 @@ export default function EdonSimPro() {
         <div className="mt-6 flex flex-col gap-2 border-b border-light-border dark:border-dark-border pb-12">
           <h3 className="text-h4 font-semibold text-light-text-primary dark:text-dark-text-primary">Interactive Learning</h3>
           <div className="mt-6">
-            <h4 className="font-semibold text-small">Problem</h4>
+            <h4 className="font-semibold text-h4">Problem</h4>
             <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">Students needed a way to interact with 3D models in the browser.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-small">Solution</h4>
+            <h4 className="font-semibold text-h4">Solution</h4>
             <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">Rather than treating 3D models as standalone visual assets, we integrated Sketchfab models directly into the learning experience.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-small">Outcome</h4>
+            <h4 className="font-semibold text-h4">Outcome</h4>
             <p className=" text-body text-light-text-secondary dark:text-dark-text-secondary">Students could:</p>
             <ul className="flex flex-col gap-2 list-disc ml-4">
               <li className="text-body text-light-text-secondary dark:text-dark-text-secondary">rotate models freely</li>
@@ -201,17 +201,17 @@ export default function EdonSimPro() {
       <div className=" flex flex-col gap-2 pb-12 border-b border-light-border dark:border-dark-border">
         <h3 className="text-h4 font-semibold text-light-text-primary dark:text-dark-text-primary mb-6">Smartboard Experience</h3>
         <div>
-          <h4 className="font-semibold text-small">Problem</h4>
+          <h4 className="font-semibold text-h4">Problem</h4>
           <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">The platform needed to work reliably in classroom environments, including large-format touch displays and dedicated classroom hardware.</p>
         </div>
 
         <div>
-          <h4 className="font-semibold text-small">Solution</h4>
+          <h4 className="font-semibold text-h4">Solution</h4>
           <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">Adapted the interface for large touch displays by simplifying navigation, improving visibility, and making interactions comfortable during classroom demonstrations. Configured kiosk-mode environments to provide a consistent, locked-down experience across institutions.</p>
         </div>
 
         <div>
-          <h4 className="font-semibold text-small">Outcome</h4>
+          <h4 className="font-semibold text-h4">Outcome</h4>
           <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">Delivered a consistent classroom experience across institutions, with the application optimized for dedicated smartboard hardware and touch-based learning.</p>
         </div>
 
@@ -222,17 +222,17 @@ export default function EdonSimPro() {
         <h3 className="text-h4 font-semibold text-light-text-primary dark:text-dark-text-primary mb-6">Solving Cross-School Annotation Routing</h3>
 
         <div>
-          <h4 className="font-semibold text-small">Problem</h4>
+          <h4 className="font-semibold text-h4">Problem</h4>
           <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">The same Sketchfab models were shared across multiple school deployments, causing annotation links to potentially navigate users into another school's environment.</p>
         </div>
 
         <div>
-          <h4 className="font-semibold text-small">Solution</h4>
+          <h4 className="font-semibold text-h4">Solution</h4>
           <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">Implemented tenant-aware routing for annotation links so navigation remained scoped to the active institution while allowing the same 3D learning assets to be reused across deployments.</p>
         </div>
 
         <div>
-          <h4 className="font-semibold text-small">Outcome</h4>
+          <h4 className="font-semibold text-h4">Outcome</h4>
           <p className="text-body text-light-text-secondary dark:text-dark-text-secondary">Prevented cross-school navigation while maintaining a shared library of 3D learning assets across the platform.</p>
         </div>
 
@@ -273,45 +273,45 @@ export default function EdonSimPro() {
           <table className="min-w-[550px] sm:min-w-full border border-light-border dark:border-dark-border w-full border-collapse border-l-0 border-r-0">
             <thead>
               <tr className="border-b border-light-border dark:border-dark-border">
-                <th className="text-left p-4 border-b border-light-border dark:border-dark-border">Decision</th>
-                <th className="text-left p-4 border-b border-light-border dark:border-dark-border">Why we chose it</th>
-                <th className="text-left p-4 border-b border-light-border dark:border-dark-border">Trade-off</th>
+                <th className="text-left p-4 border-b border-light-border dark:border-dark-border text-small">Decision</th>
+                <th className="text-left p-4 border-b border-light-border dark:border-dark-border text-small">Why we chose it</th>
+                <th className="text-left p-4 border-b border-light-border dark:border-dark-border text-small">Trade-off</th>
               </tr>
             </thead>
             <tbody className="">
               <tr className="border-b border-light-border dark:border-dark-border">
                 <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Sketchfab Viewer Api</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Sketchfab Viewer Api</p>
                 </td>
                 <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Deliver interactive 3D experiences quickly using existing educational assets</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Deliver interactive 3D experiences quickly using existing educational assets</p>
                 </td>
                 <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Less rendering flexibility than building every experience from scratch</p>
-                </td>
-              </tr>
-
-              <tr className="border-b border-light-border dark:border-dark-border">
-                <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Centralized VPS Deployment</p>
-                </td>
-                <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Simplified maintenance and reduced infrastructure costs</p>
-                </td>
-                <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Larger deployment blast radius requiring careful staging and rollback planning</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Less rendering flexibility than building every experience from scratch</p>
                 </td>
               </tr>
 
               <tr className="border-b border-light-border dark:border-dark-border">
                 <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Shared Learning Assets</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Centralized VPS Deployment</p>
                 </td>
                 <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Easier content updates across every institution</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Simplified maintenance and reduced infrastructure costs</p>
                 </td>
                 <td className="p-4 border-b border-light-border dark:border-dark-border">
-                  <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">Required tenant-aware routing to prevent cross-school navigation</p>
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Larger deployment blast radius requiring careful staging and rollback planning</p>
+                </td>
+              </tr>
+
+              <tr className="border-b border-light-border dark:border-dark-border">
+                <td className="p-4 border-b border-light-border dark:border-dark-border">
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Shared Learning Assets</p>
+                </td>
+                <td className="p-4 border-b border-light-border dark:border-dark-border">
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Easier content updates across every institution</p>
+                </td>
+                <td className="p-4 border-b border-light-border dark:border-dark-border">
+                  <p className="text-small text-light-text-secondary dark:text-dark-text-secondary">Required tenant-aware routing to prevent cross-school navigation</p>
                 </td>
               </tr>
             </tbody>

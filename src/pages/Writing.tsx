@@ -27,10 +27,10 @@ export default function Writing() {
 
       {/* Hero Section */}
       <div className="flex flex-col gap-2 sm:gap-3 mb-8 sm:mb-12">
-        <h1 className="text-2xl sm:text-3xl md:text-h2 font-bold text-light-text-primary dark:text-dark-text-primary leading-tight">
+        <h1 className="text-h2 font-bold text-light-text-primary dark:text-dark-text-primary leading-tight">
           Writing
         </h1>
-        <p className="text-sm sm:text-base md:text-body text-light-text-secondary dark:text-dark-text-secondary max-w-3xl leading-relaxed">
+        <p className="text-body text-light-text-secondary dark:text-dark-text-secondary max-w-3xl leading-relaxed">
           Essays, architectural breakdowns, and engineering notes on 3D web graphics, scalable frontend systems, resilient billing pipelines, and lessons learned from production.
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function Writing() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-3 py-1.5 text-xs rounded-badge transition-default cursor-pointer font-medium ${
+              className={`px-3 py-1.5 text-small rounded-badge transition-default cursor-pointer font-medium ${
                 isActive
                   ? "bg-accent text-white"
                   : "bg-light-surface dark:bg-dark-surface text-light-text-secondary dark:text-dark-text-secondary hover:text-light-text-primary dark:hover:text-dark-text-primary border border-light-border dark:border-dark-border"
@@ -65,7 +65,7 @@ export default function Writing() {
               className="group flex flex-col sm:flex-row justify-between gap-3 sm:gap-8 lg:gap-16 py-6 sm:py-8 cursor-pointer transition-default sm:items-center"
             >
               <div className="flex flex-col">
-                <div className="flex items-center gap-2 sm:gap-3 mb-1.5 text-xs text-light-text-secondary dark:text-dark-text-secondary">
+                <div className="flex items-center gap-2 sm:gap-3 mb-1.5 text-small text-light-text-secondary dark:text-dark-text-secondary">
                   <span>{article.date}</span>
                   <span>•</span>
                   <span className="text-accent font-medium">{article.category}</span>
@@ -73,17 +73,17 @@ export default function Writing() {
                   <span>{article.readTime}</span>
                 </div>
 
-                <h2 className="text-base sm:text-lg md:text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1.5 group-hover:text-accent transition-colors leading-snug">
+                <h2 className="text-h4 text-light-text-primary font-semibold dark:text-dark-text-primary mb-1.5 group-hover:text-accent transition-colors leading-snug">
                   {article.title}
                 </h2>
 
-                <p className="text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary leading-relaxed max-w-2xl">
+                <p className="text-small text-light-text-secondary dark:text-dark-text-secondary leading-relaxed max-w-2xl">
                   {article.excerpt}
                 </p>
               </div>
 
               <div className="self-start sm:self-center shrink-0 pt-1 sm:pt-0">
-                <div className="flex items-center gap-1 text-xs sm:text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
+                <div className="flex items-center gap-1 text-small text-light-text-secondary dark:text-dark-text-secondary text-nowrap group-hover:text-accent transition-colors transition-default">
                   <span className="relative">
                     Read Article
                     <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-accent transition-all transition-default group-hover:w-full"></span>
