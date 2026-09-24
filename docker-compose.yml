@@ -10,9 +10,9 @@ services:
       - ./dist:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
-      - multitenant_mt-net
+      - ci
 
 
 networks:
-  multitenant_mt-net:
+  ci:
     external: true
